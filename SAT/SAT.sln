@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Controllers", "Controllers\Controllers.csproj", "{B1A96092-4A68-4E83-966F-93077DBB1B78}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "Models\Models.csproj", "{01D486A5-BEB4-4BA8-8D7E-0F0D8F0877D1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfView", "WpfView\WpfView.csproj", "{969E5E90-C649-489B-8267-2B20D85BFC61}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B1A96092-4A68-4E83-966F-93077DBB1B78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1A96092-4A68-4E83-966F-93077DBB1B78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1A96092-4A68-4E83-966F-93077DBB1B78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1A96092-4A68-4E83-966F-93077DBB1B78}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01D486A5-BEB4-4BA8-8D7E-0F0D8F0877D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01D486A5-BEB4-4BA8-8D7E-0F0D8F0877D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01D486A5-BEB4-4BA8-8D7E-0F0D8F0877D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01D486A5-BEB4-4BA8-8D7E-0F0D8F0877D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{969E5E90-C649-489B-8267-2B20D85BFC61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{969E5E90-C649-489B-8267-2B20D85BFC61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{969E5E90-C649-489B-8267-2B20D85BFC61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{969E5E90-C649-489B-8267-2B20D85BFC61}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C56C98F3-DBF7-4696-84C3-00321BFDAD68}
+	EndGlobalSection
+EndGlobal

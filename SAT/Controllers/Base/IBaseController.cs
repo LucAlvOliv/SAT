@@ -4,6 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using Models;
+using System.Collections.Generic;
+
 namespace Controllers.Base
 {
     interface IBaseController<T> where T : class
@@ -18,5 +21,7 @@ namespace Controllers.Base
         void Editar(T entity);
 
         void Excluir(int id);
+
     }
 }
+

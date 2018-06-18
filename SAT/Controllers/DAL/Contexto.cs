@@ -12,7 +12,14 @@ namespace Controllers.DAL
     {
         public Contexto() : base("strConn")
         {
+            // PADRAO (se nao existir base de dados, cria)
+            //Database.SetInitializer(new CreateDatabaseIfNotExists<Contexto>());
 
+            // Apaga e recria a base toda vez que o projeto é executado
+            //Database.SetInitializer(new DropCreateDatabaseAlways<Contexto>());
+
+            // Apaga e recria a base de dados se houver alteracoes nas modelos
+            //Database.SetInitializer(new DropCreateDatabaseIfModelChanges<Contexto>());
         }
         public DbSet<Usuario> Usuarios { get; set; }
 

@@ -24,5 +24,12 @@ namespace WpfView
         {
             InitializeComponent();
         }
+
+        private void ___btnNovo__Click(object sender, RoutedEventArgs e)
+        {
+            NovoAtendente novoAtendente = new NovoAtendente();
+
+            novoAtendente.Show();
+        }
     }
 }

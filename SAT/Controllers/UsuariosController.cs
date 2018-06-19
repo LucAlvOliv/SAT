@@ -35,10 +35,6 @@ namespace Controllers
 
             if (usu != null)
             {
-                // 1a forma
-                //contexto.Entry(usu).State = System.Data.Entity.EntityState.Deleted;
-
-                // 2a forma
                 contexto.Usuarios.Remove(usu);
 
                 contexto.SaveChanges();
@@ -47,12 +43,6 @@ namespace Controllers
 
         public IList<Usuario> ListarPorNome(string nome)
         {
-            // LINQ - tem que ser linkado
-            //var usuariosComNome = from usu in contexto.Usuarios
-            //                      where usu.Nome == nome
-            //                      select usu;
-            //return usuariosComNome.ToList();
-
             return contexto.Usuarios.Where(usu => usu.Nome == nome).ToList();
         }
 

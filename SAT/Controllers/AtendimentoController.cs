@@ -1,4 +1,5 @@
 ﻿using Controllers.Base;
+using Controllers.DAL;
 using Models;
 using System;
 using System.Collections.Generic;
@@ -10,34 +11,44 @@ namespace Controllers
 {
     class AtendimentoController : IBaseController<Atendimento>
     {
+        private Contexto contexto = new Contexto();
         public void Adicionar(Atendimento entity)
         {
-            throw new NotImplementedException();
+            contexto.Atendimento.Add(entity);
+            contexto.SaveChanges();
         }
 
         public Atendimento BuscarPorID(int id)
         {
-            throw new NotImplementedException();
+            return contexto.Atendimento.Find(id);
         }
 
         public void Editar(Atendimento entity)
         {
-            throw new NotImplementedException();
+            contexto.Entry(entity).State = System.Data.Entity.EntityState.Modified;
+            contexto.SaveChanges();
         }
 
         public void Excluir(int id)
         {
-            throw new NotImplementedException();
+            Atendimento usu = BuscarPorID(id);
+
+            if (usu != null)
+            {
+                contexto.Atendimento.Remove(usu);
+
+                contexto.SaveChanges();
+            }
         }
 
         public IList<Atendimento> ListarPorNome(string nome)
         {
-            throw new NotImplementedException();
+            return contexto.Atendimento.Where(usu => usu.Nome == nome).ToList();
         }
 
         public IList<Atendimento> ListarTodos()
         {
-            throw new NotImplementedException();
+            return contexto.Atendimento.ToList();
         }
     }
 }

@@ -21,5 +21,11 @@ namespace Models
         public int CPF { get; set; }
 
         public string Plano { get; set; }
+
+        public string Endereco { get; set; }
+
+        public int CEP { get; set; }
+
+
     }
 }

@@ -47,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AtendenteController.cs" />
     <Compile Include="AtendimentoController.cs" />
     <Compile Include="Base\IBaseController.cs" />
     <Compile Include="DAL\Contexto.cs" />

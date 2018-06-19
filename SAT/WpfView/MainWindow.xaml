@@ -11,7 +11,8 @@
         <Label Content="Senha" HorizontalAlignment="Left" Margin="21,128,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.158,0.115"/>
         <TextBox HorizontalAlignment="Left" Height="23" Margin="71,83,0,0" TextWrapping="Wrap" Text="Exemplo" VerticalAlignment="Top" Width="86"/>
         <TextBox HorizontalAlignment="Left" Height="23" Margin="71,131,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="86" Text="*********"/>
-        <Button Content="Entrar" HorizontalAlignment="Left" Margin="59,199,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.493,0.55"/>
+        <Button Content="Entrar" HorizontalAlignment="Left" Margin="59,188,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.493,0.55"/>
+        <Button Content="Novo" HorizontalAlignment="Left" Margin="59,224,0,0" VerticalAlignment="Top" Width="75"/>
 
     </Grid>
 </Window>

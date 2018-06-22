@@ -31,5 +31,12 @@ namespace WpfView
 
             novoAtendente.Show();
         }
+
+        private void btnEntrar_Click(object sender, RoutedEventArgs e)
+        {
+            Atendimento atendimento = new Atendimento();
+
+            atendimento.Show();
+        }
     }
 }

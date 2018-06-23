@@ -25,7 +25,7 @@ namespace Utils
             byte[] data = md5Hash.ComputeHash(Encoding.UTF8.GetBytes(input));
 
             // Create a new Stringbuilder to collect the bytes
-            // and create a string.
+            // and create a string./
             StringBuilder sBuilder = new StringBuilder();
 
             // Loop through each byte of the hashed data 

@@ -38,6 +38,18 @@
                 <RadioButton Content="Não Solucionado" HorizontalAlignment="Left" Margin="232,327,0,0" VerticalAlignment="Top" FontWeight="Bold" GroupName="Confere"/>
                 <CheckBox x:Name="cbONU" Content="ONU Reini." HorizontalAlignment="Left" Margin="217,265,0,0" VerticalAlignment="Top" Visibility="Hidden"/>
                 <CheckBox x:Name="cbRompimento" Content="Possivel Romp." HorizontalAlignment="Left" Margin="340,265,0,0" VerticalAlignment="Top" Visibility="Hidden"/>
+                <Label Content="Label" HorizontalAlignment="Left" Margin="89,385,0,0" VerticalAlignment="Top"/>
+                <Label Content="Label" HorizontalAlignment="Left" Margin="89,498,0,0" VerticalAlignment="Top"/>
+                <Label Content="Label" HorizontalAlignment="Left" Margin="89,437,0,0" VerticalAlignment="Top"/>
+                <TextBox HorizontalAlignment="Left" Height="23" Margin="157,389,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+                <TextBox HorizontalAlignment="Left" Height="23" Margin="157,441,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+                <TextBox HorizontalAlignment="Left" Height="23" Margin="157,502,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+                <TextBox HorizontalAlignment="Left" Height="23" Margin="387,388,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+                <TextBox HorizontalAlignment="Left" Height="23" Margin="387,441,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+                <TextBox HorizontalAlignment="Left" Height="23" Margin="387,501,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+                <Label Content="Label" HorizontalAlignment="Left" Margin="322,441,0,0" VerticalAlignment="Top"/>
+                <Label Content="Label" HorizontalAlignment="Left" Margin="322,498,0,0" VerticalAlignment="Top"/>
+                <Label Content="Label" HorizontalAlignment="Left" Margin="322,385,0,0" VerticalAlignment="Top"/>
             </Grid>
         </TabItem>
         <TabItem Header="Histórico">

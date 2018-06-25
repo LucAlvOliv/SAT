@@ -26,15 +26,9 @@ namespace WpfView
 
         private void rdoRegiao_Checked(object sender, RoutedEventArgs e)
         {
-            if (rdoRegiao.Checked)
-            {
-                rdoRadio.Visible = Visible;
-            }
-            else
-            {
-                rdoRadio.Visible = false;
-                .
-            }
+            rdoRadio.Visibility = Visibility.Hidden;
+            rdoFibra.Visibility = Visibility.Hidden;
+            rdoCabeada.Visibility = Visibility.Hidden;
         }
     }
 }

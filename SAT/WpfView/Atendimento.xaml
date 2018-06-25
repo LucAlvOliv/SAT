@@ -6,8 +6,8 @@
         xmlns:local="clr-namespace:WpfView"
         mc:Ignorable="d"
         Title="Atendimento" Height="847.281" Width="1085.75">
-    <Grid>
-        <Button x:Name="btnLimpar" Content="Limpar" HorizontalAlignment="Left" Margin="566,42,0,0" VerticalAlignment="Top" Width="75"/>
+    <Grid Background="#FFF5CA9F">
+        <Button x:Name="btnLimpar" Content="Limpar" HorizontalAlignment="Left" Margin="566,42,0,0" VerticalAlignment="Top" Width="75" Background="#FFEA7373"/>
         <Label Content="Nome" HorizontalAlignment="Left" Margin="89,62,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="txtNome" HorizontalAlignment="Left" Height="23" Margin="161,62,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
         <Label Content="CPF" HorizontalAlignment="Left" Margin="89,93,0,0" VerticalAlignment="Top"/>
@@ -23,14 +23,14 @@
         <RadioButton x:Name="rdoRegiao" Content="Problema na Região" HorizontalAlignment="Left" Margin="566,107,0,0" VerticalAlignment="Top" Checked="rdoRegiao_Checked"/>
         <Label Content="Cod.Cliente" HorizontalAlignment="Left" Margin="89,124,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="txtCodCliente" HorizontalAlignment="Left" Height="23" Margin="161,127,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <RadioButton x:Name="rdoReiniciadoPOE" Content="Reiniciado POE" HorizontalAlignment="Left" Margin="89,270,0,0" VerticalAlignment="Top"/>
-        <RadioButton Content="RadioButton" HorizontalAlignment="Left" Margin="232,270,0,0" VerticalAlignment="Top"/>
-        <RadioButton Content="RadioButton" HorizontalAlignment="Left" Margin="376,270,0,0" VerticalAlignment="Top"/>
-        <RadioButton Content="RadioButton" HorizontalAlignment="Left" Margin="525,270,0,0" VerticalAlignment="Top"/>
-        <RadioButton Content="RadioButton" HorizontalAlignment="Left" Margin="89,327,0,0" VerticalAlignment="Top"/>
-        <RadioButton Content="RadioButton" HorizontalAlignment="Left" Margin="232,327,0,0" VerticalAlignment="Top"/>
-        <RadioButton Content="RadioButton" HorizontalAlignment="Left" Margin="376,327,0,0" VerticalAlignment="Top"/>
-        <RadioButton Content="RadioButton" HorizontalAlignment="Left" Margin="525,327,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="cbCabos" Content="Verificado Cabos" HorizontalAlignment="Left" Margin="232,270,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="cbReiniciadoPoe" Content="Reiniciado POE" HorizontalAlignment="Left" Margin="89,270,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="cb" Content="CheckBox" HorizontalAlignment="Left" Margin="495,270,0,0" VerticalAlignment="Top"/>
+        <CheckBox Content="CheckBox" HorizontalAlignment="Left" Margin="495,327,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="cbDiscador" Content="Criado Discador" HorizontalAlignment="Left" Margin="376,270,0,0" VerticalAlignment="Top"/>
+        <CheckBox Content="CheckBox" HorizontalAlignment="Left" Margin="376,327,0,0" VerticalAlignment="Top"/>
+        <CheckBox Content="CheckBox" HorizontalAlignment="Left" Margin="89,327,0,0" VerticalAlignment="Top"/>
+        <CheckBox Content="CheckBox" HorizontalAlignment="Left" Margin="232,327,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>

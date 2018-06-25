@@ -26,27 +26,94 @@ namespace WpfView
 
         private void rdoRegiao_Checked(object sender, RoutedEventArgs e)
         {
-            //Planos
-            rdoRadio.Visibility = Visibility.Hidden;
-            rdoFibra.Visibility = Visibility.Hidden;
-            rdoCabeada.Visibility = Visibility.Hidden;
+            //Visibilidade CheckBox
+            //radio
+            cbCabos.Visibility = Visibility.Hidden;
+            cbDiscador.Visibility = Visibility.Hidden;
+            cbIsoladoCabo.Visibility = Visibility.Hidden;
+            cbReiniciadoPoe.Visibility = Visibility.Hidden;
+
         }
 
         private void btnLimpar_Click(object sender, RoutedEventArgs e)
         {
-            //Regiao
+            //Checked
+            //regiao
             rdoRegiao.IsChecked = false;
-            rdoRadio.Visibility = Visibility.Visible;
-            rdoFibra.Visibility = Visibility.Visible;
-            rdoCabeada.Visibility = Visibility.Visible;
+            //planos
+            rdoRadio.IsChecked = false;
+            rdoFibra.IsChecked = false;
+            rdoCabeada.IsChecked = false;
+            //radio
+            cbReiniciadoPoe.IsChecked = false;
+            cbIsoladoCabo.IsChecked = false;
+            cbDiscador.IsChecked = false;
+            cbCabos.IsChecked = false;
+            //fibra
+            cbONU.IsChecked = false;
+            cbRompimento.IsChecked = false;
+            //cabeada
+            cbRoteador.IsChecked = false;
+
+            //Visibilidade Geral
+            //radio
+            cbCabos.Visibility = Visibility.Hidden;
+            cbDiscador.Visibility = Visibility.Hidden;
+            cbIsoladoCabo.Visibility = Visibility.Hidden;
+            cbReiniciadoPoe.Visibility = Visibility.Hidden;
+            //fibra
+            cbONU.Visibility = Visibility.Hidden;
+            cbRompimento.Visibility = Visibility.Hidden;
+            //cabeada
+            cbRoteador.Visibility = Visibility.Hidden;
         }
 
         private void rdoRadio_Checked(object sender, RoutedEventArgs e)
         {
+            //Visibilidade para os botoes dessa tecnologia
             cbCabos.Visibility = Visibility.Visible;
             cbDiscador.Visibility = Visibility.Visible;
             cbIsoladoCabo.Visibility = Visibility.Visible;
             cbReiniciadoPoe.Visibility = Visibility.Visible;
+
+            //Visibilidade Outros
+            //fibra
+            cbONU.Visibility = Visibility.Hidden;
+            cbRompimento.Visibility = Visibility.Hidden;
+            //cabeada
+            cbRoteador.Visibility = Visibility.Hidden;
+        }
+
+        private void rdoFibra_Checked(object sender, RoutedEventArgs e)
+        {
+            //Visibilidade para os botoes dessa tecnologia
+            cbCabos.Visibility = Visibility.Visible;
+            cbDiscador.Visibility = Visibility.Visible;
+            cbONU.Visibility = Visibility.Visible;
+            cbRompimento.Visibility = Visibility.Visible;
+
+            //Visibilidade Outros
+            //radio
+            cbIsoladoCabo.Visibility = Visibility.Hidden;
+            cbReiniciadoPoe.Visibility = Visibility.Hidden;
+            //cabeada
+            cbRoteador.Visibility = Visibility.Hidden;
+        }
+
+        private void rdoCabeada_Checked(object sender, RoutedEventArgs e)
+        {
+            //Visibilidade para os botoes dessa tecnologia
+            cbCabos.Visibility = Visibility.Visible;
+            cbDiscador.Visibility = Visibility.Visible;
+            cbIsoladoCabo.Visibility = Visibility.Visible;
+            cbRoteador.Visibility = Visibility.Visible;
+
+            //Visibilidade Outros
+            //radio
+            cbReiniciadoPoe.Visibility = Visibility.Hidden;
+            //fibra
+            cbONU.Visibility = Visibility.Hidden;
+            cbRompimento.Visibility = Visibility.Hidden;
         }
     }
 }

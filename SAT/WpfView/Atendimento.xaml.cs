@@ -66,6 +66,18 @@ namespace WpfView
             cbRompimento.Visibility = Visibility.Hidden;
             //cabeada
             cbRoteador.Visibility = Visibility.Hidden;
+
+            //Campos Geral
+            txtNome.Clear();
+            txtCpf.Clear();
+            txtCodCliente.Clear();
+            txtProtocolo.Clear();
+            txtEndereco.Clear();
+            txtTelefone.Clear();
+            txtReferencia.Clear();
+            txtPeriodo.Clear();
+            txtDescricao.Clear();
+            txtAtendimento.Clear();
         }
 
         private void rdoRadio_Checked(object sender, RoutedEventArgs e)

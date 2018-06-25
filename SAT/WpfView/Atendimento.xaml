@@ -5,24 +5,32 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfView"
         mc:Ignorable="d"
-        Title="Atendimento" Height="1020.281" Width="1085.75">
+        Title="Atendimento" Height="847.281" Width="1085.75">
     <Grid>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="566,42,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="btnLimpar" Content="Limpar" HorizontalAlignment="Left" Margin="566,42,0,0" VerticalAlignment="Top" Width="75"/>
         <Label Content="Nome" HorizontalAlignment="Left" Margin="89,62,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="161,62,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtNome" HorizontalAlignment="Left" Height="23" Margin="161,62,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
         <Label Content="CPF" HorizontalAlignment="Left" Margin="89,93,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="161,93,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtCpf" HorizontalAlignment="Left" Height="23" Margin="161,93,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
         <TextBlock HorizontalAlignment="Left" Margin="782,42,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="736" Width="244"><Run Text="auysdgauysgduaysgduaysdgausydgausydgausydgausydgausydgausdyagsuydgausdyagsduyga"/><LineBreak/><Run/></TextBlock>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="389,62,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtProtocolo" HorizontalAlignment="Left" Height="23" Margin="389,62,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
         <TextBox HorizontalAlignment="Left" Height="23" Margin="389,93,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
         <Label Content="Label" HorizontalAlignment="Left" Margin="322,93,0,0" VerticalAlignment="Top"/>
-        <Label Content="Label" HorizontalAlignment="Left" Margin="322,62,0,0" VerticalAlignment="Top"/>
-        <RadioButton Content="RadioButton" HorizontalAlignment="Left" Margin="89,207,0,0" VerticalAlignment="Top"/>
-        <RadioButton Content="RadioButton" HorizontalAlignment="Left" Margin="232,207,0,0" VerticalAlignment="Top"/>
-        <RadioButton Content="RadioButton" HorizontalAlignment="Left" Margin="376,207,0,0" VerticalAlignment="Top"/>
-        <RadioButton Content="RadioButton" HorizontalAlignment="Left" Margin="566,107,0,0" VerticalAlignment="Top"/>
+        <Label Content="Protocolo" HorizontalAlignment="Left" Margin="322,62,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="rdoRadio" Content="Radio" HorizontalAlignment="Left" Margin="89,207,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="rdoFibra" Content="Fibra" HorizontalAlignment="Left" Margin="232,207,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="rdoCabeada" Content="Rede Cabeada" HorizontalAlignment="Left" Margin="376,207,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="rdoRegiao" Content="Problema na Região" HorizontalAlignment="Left" Margin="566,107,0,0" VerticalAlignment="Top" Checked="rdoRegiao_Checked"/>
         <Label Content="Cod.Cliente" HorizontalAlignment="Left" Margin="89,124,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="161,127,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtCodCliente" HorizontalAlignment="Left" Height="23" Margin="161,127,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <RadioButton x:Name="rdoReiniciadoPOE" Content="Reiniciado POE" HorizontalAlignment="Left" Margin="89,270,0,0" VerticalAlignment="Top"/>
+        <RadioButton Content="RadioButton" HorizontalAlignment="Left" Margin="232,270,0,0" VerticalAlignment="Top"/>
+        <RadioButton Content="RadioButton" HorizontalAlignment="Left" Margin="376,270,0,0" VerticalAlignment="Top"/>
+        <RadioButton Content="RadioButton" HorizontalAlignment="Left" Margin="525,270,0,0" VerticalAlignment="Top"/>
+        <RadioButton Content="RadioButton" HorizontalAlignment="Left" Margin="89,327,0,0" VerticalAlignment="Top"/>
+        <RadioButton Content="RadioButton" HorizontalAlignment="Left" Margin="232,327,0,0" VerticalAlignment="Top"/>
+        <RadioButton Content="RadioButton" HorizontalAlignment="Left" Margin="376,327,0,0" VerticalAlignment="Top"/>
+        <RadioButton Content="RadioButton" HorizontalAlignment="Left" Margin="525,327,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>

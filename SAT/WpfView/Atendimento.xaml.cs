@@ -23,5 +23,18 @@ namespace WpfView
         {
             InitializeComponent();
         }
+
+        private void rdoRegiao_Checked(object sender, RoutedEventArgs e)
+        {
+            if (rdoRegiao.Checked)
+            {
+                rdoRadio.Visible = Visible;
+            }
+            else
+            {
+                rdoRadio.Visible = false;
+                .
+            }
+        }
     }
 }

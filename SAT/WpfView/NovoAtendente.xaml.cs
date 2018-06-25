@@ -13,6 +13,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using Utils;
+using Controllers;
+using Models;
 
 namespace WpfView
 {
@@ -35,7 +37,14 @@ namespace WpfView
             }
 
             string senhaCriptografada = Criptografia.GerarCriptografia(pswSenha.Password);
-
+            
+            AtendenteController atendenteController = new AtendenteController();
+            Atendente novo = new Atendente();
+            novo.Usuario = txtUsuario.Text;
+            string s = senhaCriptografada;
+            novo.Senha = s;
+            atendenteController.Adicionar(novo);
+            MessageBox.Show("Criado com sucesso!");
         }
 
 

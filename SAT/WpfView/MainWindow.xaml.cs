@@ -34,8 +34,12 @@ namespace WpfView
 
         private void btnEntrar_Click(object sender, RoutedEventArgs e)
         {
+            if (true)
+            {
+                MessageBox.Show("Nome de usuário ou senha incorretos!");
+                return;
+            }
             Atendimento atendimento = new Atendimento();
-
             atendimento.Show();
         }
     }

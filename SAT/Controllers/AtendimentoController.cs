@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Controllers
 {
-    class AtendimentoController : IBaseController<Atendimento>
+    public class AtendimentoController : IBaseController<Atendimento>
     {
         private Contexto contexto = new Contexto();
         public void Adicionar(Atendimento entity)

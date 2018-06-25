@@ -5,12 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfView"
         mc:Ignorable="d"
-        Title="NovoAtendente" Height="450" Width="800">
-    <Grid>
+        Title="NovoAtendente" Height="450" Width="457.834">
+    <Grid Margin="0,0,2,0">
         <Button x:Name="btnCriar" Content="Criar" HorizontalAlignment="Left" Margin="107,253,0,0" VerticalAlignment="Top" Width="75" Click="btnCriar_Click"/>
         <Label Content="Usuario" HorizontalAlignment="Left" Margin="88,93,0,0" VerticalAlignment="Top"/>
         <Label Content="Senha" HorizontalAlignment="Left" Margin="88,149,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="175,96,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtUsuario" HorizontalAlignment="Left" Height="23" Margin="175,96,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
         <PasswordBox x:Name="pswSenha" HorizontalAlignment="Left" Margin="175,149,0,0" VerticalAlignment="Top" Width="178"/>
         <PasswordBox x:Name="pswConfirmarSenha" HorizontalAlignment="Left" Margin="175,201,0,0" VerticalAlignment="Top" Width="178"/>
         <Label Content="Label" HorizontalAlignment="Left" Margin="92,193,0,0" VerticalAlignment="Top"/>

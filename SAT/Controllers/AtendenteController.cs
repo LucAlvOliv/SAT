@@ -9,24 +9,24 @@ using System.Threading.Tasks;
 
 namespace Controllers
 {
-    class AtendenteController : IBaseController<Atendente>
+    public class AtendenteController : IBaseController<Atendente>
     {
-        private Contexto contexto = new Contexto();
+        private Contexto context = new Contexto();
         public void Adicionar(Atendente entity)
         {
-            contexto.Atendente.Add(entity);
-            contexto.SaveChanges();
+            context.Atendente.Add(entity);
+            context.SaveChanges();
         }
 
         public Atendente BuscarPorID(int id)
         {
-            return contexto.Atendente.Find(id);
+            return context.Atendente.Find(id);
         }
 
         public void Editar(Atendente entity)
         {
-            contexto.Entry(entity).State = System.Data.Entity.EntityState.Modified;
-            contexto.SaveChanges();
+            context.Entry(entity).State = System.Data.Entity.EntityState.Modified;
+            context.SaveChanges();
         }
 
         public void Excluir(int id)
@@ -35,9 +35,9 @@ namespace Controllers
 
             if (usu != null)
             {
-                contexto.Atendente.Remove(usu);
+                context.Atendente.Remove(usu);
 
-                contexto.SaveChanges();
+                context.SaveChanges();
             }
         }
 

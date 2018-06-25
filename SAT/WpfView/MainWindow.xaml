@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:WpfView"
         mc:Ignorable="d"
         Title="MainWindow" Height="300" Width="200">
-    <Grid>
+    <Grid Background="#FFF05B5B">
         <Label Content="Usuario" HorizontalAlignment="Left" Margin="21,79,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.237,-0.385"/>
         <Label Content="Senha" HorizontalAlignment="Left" Margin="21,128,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.158,0.115"/>
         <TextBox x:Name="txtLogin" HorizontalAlignment="Left" Height="23" Margin="71,83,0,0" TextWrapping="Wrap" Text="Exemplo" VerticalAlignment="Top" Width="86"/>

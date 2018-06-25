@@ -26,9 +26,27 @@ namespace WpfView
 
         private void rdoRegiao_Checked(object sender, RoutedEventArgs e)
         {
+            //Planos
             rdoRadio.Visibility = Visibility.Hidden;
             rdoFibra.Visibility = Visibility.Hidden;
             rdoCabeada.Visibility = Visibility.Hidden;
+        }
+
+        private void btnLimpar_Click(object sender, RoutedEventArgs e)
+        {
+            //Regiao
+            rdoRegiao.IsChecked = false;
+            rdoRadio.Visibility = Visibility.Visible;
+            rdoFibra.Visibility = Visibility.Visible;
+            rdoCabeada.Visibility = Visibility.Visible;
+        }
+
+        private void rdoRadio_Checked(object sender, RoutedEventArgs e)
+        {
+            cbCabos.Visibility = Visibility.Visible;
+            cbDiscador.Visibility = Visibility.Visible;
+            cbIsoladoCabo.Visibility = Visibility.Visible;
+            cbReiniciadoPoe.Visibility = Visibility.Visible;
         }
     }
 }

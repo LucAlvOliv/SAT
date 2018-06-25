@@ -5,32 +5,41 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfView"
         mc:Ignorable="d"
-        Title="Atendimento" Height="847.281" Width="1085.75">
-    <Grid Background="#FFF5CA9F">
-        <Button x:Name="btnLimpar" Content="Limpar" HorizontalAlignment="Left" Margin="566,42,0,0" VerticalAlignment="Top" Width="75" Background="#FFEA7373"/>
-        <Label Content="Nome" HorizontalAlignment="Left" Margin="89,62,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="txtNome" HorizontalAlignment="Left" Height="23" Margin="161,62,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <Label Content="CPF" HorizontalAlignment="Left" Margin="89,93,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="txtCpf" HorizontalAlignment="Left" Height="23" Margin="161,93,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBlock HorizontalAlignment="Left" Margin="782,42,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="736" Width="244"><Run Text="auysdgauysgduaysgduaysdgausydgausydgausydgausydgausydgausdyagsuydgausdyagsduyga"/><LineBreak/><Run/></TextBlock>
-        <TextBox x:Name="txtProtocolo" HorizontalAlignment="Left" Height="23" Margin="389,62,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="389,93,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Label" HorizontalAlignment="Left" Margin="322,93,0,0" VerticalAlignment="Top"/>
-        <Label Content="Protocolo" HorizontalAlignment="Left" Margin="322,62,0,0" VerticalAlignment="Top"/>
-        <RadioButton x:Name="rdoRadio" Content="Radio" HorizontalAlignment="Left" Margin="89,207,0,0" VerticalAlignment="Top"/>
-        <RadioButton x:Name="rdoFibra" Content="Fibra" HorizontalAlignment="Left" Margin="232,207,0,0" VerticalAlignment="Top"/>
-        <RadioButton x:Name="rdoCabeada" Content="Rede Cabeada" HorizontalAlignment="Left" Margin="376,207,0,0" VerticalAlignment="Top"/>
-        <RadioButton x:Name="rdoRegiao" Content="Problema na Região" HorizontalAlignment="Left" Margin="566,107,0,0" VerticalAlignment="Top" Checked="rdoRegiao_Checked"/>
-        <Label Content="Cod.Cliente" HorizontalAlignment="Left" Margin="89,124,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="txtCodCliente" HorizontalAlignment="Left" Height="23" Margin="161,127,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <CheckBox x:Name="cbCabos" Content="Verificado Cabos" HorizontalAlignment="Left" Margin="232,270,0,0" VerticalAlignment="Top"/>
-        <CheckBox x:Name="cbReiniciadoPoe" Content="Reiniciado POE" HorizontalAlignment="Left" Margin="89,270,0,0" VerticalAlignment="Top"/>
-        <CheckBox x:Name="cb" Content="CheckBox" HorizontalAlignment="Left" Margin="495,270,0,0" VerticalAlignment="Top"/>
-        <CheckBox Content="CheckBox" HorizontalAlignment="Left" Margin="495,327,0,0" VerticalAlignment="Top"/>
-        <CheckBox x:Name="cbDiscador" Content="Criado Discador" HorizontalAlignment="Left" Margin="376,270,0,0" VerticalAlignment="Top"/>
-        <CheckBox Content="CheckBox" HorizontalAlignment="Left" Margin="376,327,0,0" VerticalAlignment="Top"/>
-        <CheckBox Content="CheckBox" HorizontalAlignment="Left" Margin="89,327,0,0" VerticalAlignment="Top"/>
-        <CheckBox Content="CheckBox" HorizontalAlignment="Left" Margin="232,327,0,0" VerticalAlignment="Top"/>
-
-    </Grid>
+        Title="Atendimento" Height="1000" Width="1000">
+    <TabControl x:Name="Atendimento1" HorizontalAlignment="Left" Height="1000" Margin="0" VerticalAlignment="Top" Width="1000">
+        <TabItem Header="Atendimento">
+            <Grid Background="#FFF5CA9F" Margin="10,-3,-10,3">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Button x:Name="btnLimpar" Content="Limpar" HorizontalAlignment="Left" Margin="564,42,0,0" VerticalAlignment="Top" Width="75" Background="#FFEA7373" Click="btnLimpar_Click" Height="20"/>
+                <Label Content="Nome" HorizontalAlignment="Left" Margin="89,62,0,0" VerticalAlignment="Top" Height="26" Width="43"/>
+                <TextBox x:Name="txtNome" HorizontalAlignment="Left" Height="23" Margin="161,62,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+                <Label Content="CPF" HorizontalAlignment="Left" Margin="89,93,0,0" VerticalAlignment="Top" Height="26" Width="30"/>
+                <TextBox x:Name="txtCpf" HorizontalAlignment="Left" Height="23" Margin="161,93,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+                <TextBox x:Name="txtProtocolo" HorizontalAlignment="Left" Height="23" Margin="387,62,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+                <TextBox HorizontalAlignment="Left" Height="23" Margin="387,93,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+                <Label Content="Label" HorizontalAlignment="Left" Margin="322,93,0,0" VerticalAlignment="Top" Height="26" Width="38"/>
+                <Label Content="Protocolo" HorizontalAlignment="Left" Margin="322,62,0,0" VerticalAlignment="Top" Height="26" Width="62"/>
+                <RadioButton x:Name="rdoRadio" Content="Radio" HorizontalAlignment="Left" Margin="89,207,0,0" VerticalAlignment="Top" Checked="rdoRadio_Checked" Height="15" Width="49"/>
+                <RadioButton x:Name="rdoFibra" Content="Fibra" HorizontalAlignment="Left" Margin="232,207,0,0" VerticalAlignment="Top" Height="15" Width="45"/>
+                <RadioButton x:Name="rdoCabeada" Content="Rede Cabeada" HorizontalAlignment="Left" Margin="374,207,0,0" VerticalAlignment="Top" Height="15" Width="95"/>
+                <RadioButton x:Name="rdoRegiao" Content="Problema na Região" HorizontalAlignment="Left" Margin="564,107,0,0" VerticalAlignment="Top" Checked="rdoRegiao_Checked" Height="15" Width="125"/>
+                <Label Content="Cod.Cliente" HorizontalAlignment="Left" Margin="89,124,0,0" VerticalAlignment="Top" Height="26" Width="71"/>
+                <TextBox x:Name="txtCodCliente" HorizontalAlignment="Left" Height="23" Margin="161,127,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+                <CheckBox x:Name="cbCabos" Content="Verificado Cabos" HorizontalAlignment="Left" Margin="232,270,0,0" VerticalAlignment="Top" Height="15" Width="108"/>
+                <CheckBox x:Name="cbReiniciadoPoe" Content="Reiniciado POE" HorizontalAlignment="Left" Margin="89,270,0,0" VerticalAlignment="Top" Height="15" Width="99"/>
+                <CheckBox x:Name="cbIsoladoCabo" Content="Isolado Cabo" HorizontalAlignment="Left" Margin="493,270,0,0" VerticalAlignment="Top" Height="15" Width="89"/>
+                <CheckBox Content="CheckBox" HorizontalAlignment="Left" Margin="493,327,0,0" VerticalAlignment="Top" Height="15" Width="71"/>
+                <CheckBox x:Name="cbDiscador" Content="Criado Discador" HorizontalAlignment="Left" Margin="374,270,0,0" VerticalAlignment="Top" Height="15" Width="104"/>
+                <CheckBox Content="CheckBox" HorizontalAlignment="Left" Margin="374,327,0,0" VerticalAlignment="Top" Height="15" Width="71"/>
+                <CheckBox Content="CheckBox" HorizontalAlignment="Left" Margin="89,327,0,0" VerticalAlignment="Top" Height="15" Width="71"/>
+                <CheckBox Content="CheckBox" HorizontalAlignment="Left" Margin="232,327,0,0" VerticalAlignment="Top" Height="15" Width="71"/>
+                <TextBox x:Name="txtGrid" HorizontalAlignment="Left" Height="515" Margin="732,62,-63,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="325"/>
+            </Grid>
+        </TabItem>
+        <TabItem Header="TabItem">
+            <Grid Background="#FFF5CA9F" Margin="0,2,0,-2"/>
+        </TabItem>
+    </TabControl>
 </Window>

@@ -34,7 +34,7 @@ namespace WpfView
 
         private void btnEntrar_Click(object sender, RoutedEventArgs e)
         {
-            if (false)
+            if (txtLogin.Text && txtSenha.Password == )
             {
                 MessageBox.Show("Nome de usuário ou senha incorretos!");
                 return;

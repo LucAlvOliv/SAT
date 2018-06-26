@@ -38,6 +38,9 @@ namespace WpfView
         private void btnLimpar_Click(object sender, RoutedEventArgs e)
         {
             //Checked
+            //soluçao
+            rdoNaoSolucionado.IsChecked = false;
+            rdoSolucionado.IsChecked = false;
             //regiao
             rdoRegiao.IsChecked = false;
             //planos
@@ -78,6 +81,20 @@ namespace WpfView
             txtPeriodo.Clear();
             txtDescricao.Clear();
             txtAtendimento.Clear();
+
+            //Visibilidade de Solução
+            //lbl
+            lblDesc.Visibility = Visibility.Hidden;
+            lblEnd.Visibility = Visibility.Hidden;
+            lblPeri.Visibility = Visibility.Hidden;
+            lblRef.Visibility = Visibility.Hidden;
+            lblTel.Visibility = Visibility.Hidden;
+            //txt
+            txtDescricao.Visibility = Visibility.Hidden;
+            txtEndereco.Visibility = Visibility.Hidden;
+            txtPeriodo.Visibility = Visibility.Hidden;
+            txtReferencia.Visibility = Visibility.Hidden;
+            txtTelefone.Visibility = Visibility.Hidden;
         }
 
         private void rdoRadio_Checked(object sender, RoutedEventArgs e)
@@ -126,6 +143,48 @@ namespace WpfView
             //fibra
             cbONU.Visibility = Visibility.Hidden;
             cbRompimento.Visibility = Visibility.Hidden;
+        }
+
+        private void rdoSolucionado_Checked(object sender, RoutedEventArgs e)
+        {
+            //Clear
+            txtEndereco.Clear();
+            txtTelefone.Clear();
+            txtReferencia.Clear();
+            txtPeriodo.Clear();
+            txtDescricao.Clear();
+            txtAtendimento.Clear();
+
+            //Visibilidade Geral
+            //lbl
+            lblDesc.Visibility = Visibility.Hidden;
+            lblEnd.Visibility = Visibility.Hidden;
+            lblPeri.Visibility = Visibility.Hidden;
+            lblRef.Visibility = Visibility.Hidden;
+            lblTel.Visibility = Visibility.Hidden;
+            //txt
+            txtDescricao.Visibility = Visibility.Hidden;
+            txtEndereco.Visibility = Visibility.Hidden;
+            txtPeriodo.Visibility = Visibility.Hidden;
+            txtReferencia.Visibility = Visibility.Hidden;
+            txtTelefone.Visibility = Visibility.Hidden;
+        }
+
+        private void rdoNaoSolucionado_Checked(object sender, RoutedEventArgs e)
+        {
+            //Visibilidade Geral
+            //lbl
+            lblDesc.Visibility = Visibility.Visible;
+            lblEnd.Visibility = Visibility.Visible;
+            lblPeri.Visibility = Visibility.Visible;
+            lblRef.Visibility = Visibility.Visible;
+            lblTel.Visibility = Visibility.Visible;
+            //txt
+            txtDescricao.Visibility = Visibility.Visible;
+            txtEndereco.Visibility = Visibility.Visible;
+            txtPeriodo.Visibility = Visibility.Visible;
+            txtReferencia.Visibility = Visibility.Visible;
+            txtTelefone.Visibility = Visibility.Visible;
         }
     }
 }

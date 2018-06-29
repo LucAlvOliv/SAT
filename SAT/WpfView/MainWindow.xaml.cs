@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Controllers;
+using Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,6 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Utils;
 
 namespace WpfView
 {
@@ -34,7 +37,7 @@ namespace WpfView
 
         private void btnEntrar_Click(object sender, RoutedEventArgs e)
         {
-            if (txtLogin.Text && txtSenha.Password == )
+            if (txtLogin.Text && txtSenha.Password != NovoAtendente.)
             {
                 MessageBox.Show("Nome de usuário ou senha incorretos!");
                 return;

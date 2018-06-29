@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Controllers;
+using Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -185,6 +187,18 @@ namespace WpfView
             txtPeriodo.Visibility = Visibility.Visible;
             txtReferencia.Visibility = Visibility.Visible;
             txtTelefone.Visibility = Visibility.Visible;
+        }
+
+        private void btnCriarCliente_Click(object sender, RoutedEventArgs e)
+        {
+            UsuariosController usuariosController = new UsuariosController();
+            Usuario novo = new Usuario();
+            novo.Nome = txtClienteNome.Text;
+            novo.CPF = txtClienteCpf.Text;
+            novo.Plano = txtClientePlano.Text;
+            novo.CodCliente = txtClienteCod.Text;
+            usuariosController.Adicionar(novo);
+            MessageBox.Show("Criado com sucesso!");
         }
     }
 }

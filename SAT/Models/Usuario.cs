@@ -17,9 +17,7 @@ namespace Models
 
         public string Plano { get; set; }
 
-        public string Endereco { get; set; }
-
-        public int CEP { get; set; }
+        public string CodCliente { get; set; }
 
 
     }

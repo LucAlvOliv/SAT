@@ -6,24 +6,25 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace Controllers
 {
-    public class AtendimentoController : IBaseController<Atendimento>
+    public class AtendimentoController : IBaseController<AtendimentoCliente>
     {
         private Contexto contexto = new Contexto();
-        public void Adicionar(Atendimento entity)
+        public void Adicionar(AtendimentoCliente entity)
         {
-            contexto.Atendimento.Add(entity);
+            contexto.AtendimentoCliente.Add(entity);
             contexto.SaveChanges();
         }
 
-        public Atendimento BuscarPorID(int id)
+        public AtendimentoCliente BuscarPorID(int id)
         {
-            return contexto.Atendimento.Find(id);
+            return contexto.AtendimentoCliente.Find(id);
         }
 
-        public void Editar(Atendimento entity)
+        public void Editar(AtendimentoCliente entity)
         {
             contexto.Entry(entity).State = System.Data.Entity.EntityState.Modified;
             contexto.SaveChanges();
@@ -31,24 +32,24 @@ namespace Controllers
 
         public void Excluir(int id)
         {
-            Atendimento usu = BuscarPorID(id);
+            AtendimentoCliente usu = BuscarPorID(id);
 
             if (usu != null)
             {
-                contexto.Atendimento.Remove(usu);
+                contexto.AtendimentoCliente.Remove(usu);
 
                 contexto.SaveChanges();
             }
         }
 
-        public IList<Atendimento> ListarPorNome(string nome)
+        public IList<AtendimentoCliente> ListarPorNome(string nome)
         {
-            return contexto.Atendimento.Where(usu => usu.Nome == nome).ToList();
+            return contexto.AtendimentoCliente.Where(usu => usu.Nome == nome).ToList();
         }
 
-        public IList<Atendimento> ListarTodos()
+        public IList<AtendimentoCliente> ListarTodos()
         {
-            return contexto.Atendimento.ToList();
+            return contexto.AtendimentoCliente.ToList();
         }
     }
 }

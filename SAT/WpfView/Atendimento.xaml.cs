@@ -34,6 +34,8 @@ namespace WpfView
             cbDiscador.Visibility = Visibility.Hidden;
             cbIsoladoCabo.Visibility = Visibility.Hidden;
             cbReiniciadoPoe.Visibility = Visibility.Hidden;
+            cbONU.Visibility = Visibility.Hidden;
+            cbRoteador.Visibility = Visibility.Hidden;
 
         }
 
@@ -83,6 +85,7 @@ namespace WpfView
             txtPeriodo.Clear();
             txtDescricao.Clear();
             txtAtendimento.Clear();
+            txtPlano.Clear();
 
             //Visibilidade de Solução
             //lbl
@@ -315,10 +318,14 @@ namespace WpfView
             }
             else
             {
-                solucao = "Solucionado: Não /nAgendamento /n" +;
+                solucao = "Solucionado: Não /nAgendamento /n" + endereco + telefone + referencia + periodo + descricao;
             }
 
-            txtAtendimento.SelectedText = nome + cpf;
+            txtAtendimento.SelectedText = nome + cpf + codCliente + protocolo + plano + tipo + solucao;
+            AtendimentoController atendimentoController = new AtendimentoController();
+            AtendimentoCliente novoatendimento = new AtendimentoCliente();
+            novoatendimento.Problema = txtAtendimento.Text;
+            atendimentoController.Adicionar(novoatendimento);
         }
     }
 }

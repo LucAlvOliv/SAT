@@ -26,7 +26,7 @@
                     <RadioButton x:Name="rdoRadio" Content="Radio" HorizontalAlignment="Left" Margin="89,207,0,0" VerticalAlignment="Top" Checked="rdoRadio_Checked" Height="15" Width="49" GroupName="Planos"/>
                     <RadioButton x:Name="rdoFibra" Content="Fibra" HorizontalAlignment="Left" Margin="232,207,0,0" VerticalAlignment="Top" Height="15" Width="46" GroupName="Planos" Checked="rdoFibra_Checked"/>
                     <RadioButton x:Name="rdoCabeada" Content="Rede Cabeada" HorizontalAlignment="Left" Margin="374,207,0,0" VerticalAlignment="Top" Height="15" Width="96" GroupName="Planos" Checked="rdoCabeada_Checked"/>
-                    <RadioButton x:Name="rdoRegiao" Content="Problema na Região" HorizontalAlignment="Left" Margin="564,107,0,0" VerticalAlignment="Top" Checked="rdoRegiao_Checked" Height="15" Width="126"/>
+                    <RadioButton x:Name="rdoRegiao" Content="Problema na Região" HorizontalAlignment="Left" Margin="564,107,0,0" VerticalAlignment="Top" Checked="rdoRegiao_Checked" Height="15" Width="126" GroupName="Planos"/>
                     <Label Content="Cod.Cliente" HorizontalAlignment="Left" Margin="89,124,0,0" VerticalAlignment="Top" Height="26" Width="71"/>
                     <TextBox x:Name="txtCodCliente" HorizontalAlignment="Left" Height="23" Margin="162,127,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
                     <CheckBox x:Name="cbCabos" Content="Cabos Verificados" HorizontalAlignment="Left" Margin="101,265,0,0" VerticalAlignment="Top" Height="15" Width="108" Visibility="Hidden"/>

@@ -323,7 +323,7 @@ namespace WpfView
 
             txtAtendimento.SelectedText = nome + cpf + codCliente + protocolo + plano + tipo + solucao;
             AtendimentoController atendimentoController = new AtendimentoController();
-            AtendimentoCliente novoatendimento = new AtendimentoCliente();
+            Models.AtendimentoCliente novoatendimento = new Models.AtendimentoCliente();
             novoatendimento.Problema = txtAtendimento.Text;
             atendimentoController.Adicionar(novoatendimento);
         }

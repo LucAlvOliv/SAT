@@ -23,7 +23,7 @@ namespace Controllers.DAL
         }
         public DbSet<Usuario> Usuarios { get; set; }
 
-        public DbSet<Atendimento> AtendimentoCliente { get; set; }
+        public DbSet<AtendimentoCliente> AtendimentoCliente { get; set; }
 
         public DbSet<Atendente> Atendente { get; set; }
     }

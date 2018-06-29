@@ -6,6 +6,8 @@ namespace Models
     {
         [Key]
         public int AtendimentoID { get; set; }
+
+        public string Nome { get; set; }
         
         [Required]
         public string Problema { get; set; }

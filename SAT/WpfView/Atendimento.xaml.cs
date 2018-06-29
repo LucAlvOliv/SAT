@@ -326,6 +326,7 @@ namespace WpfView
             Models.AtendimentoCliente novoatendimento = new Models.AtendimentoCliente();
             novoatendimento.Problema = txtAtendimento.Text;
             atendimentoController.Adicionar(novoatendimento);
+            MessageBox.Show("Atendimento salvo");
         }
     }
 }

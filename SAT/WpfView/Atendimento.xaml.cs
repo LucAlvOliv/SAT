@@ -200,5 +200,125 @@ namespace WpfView
             usuariosController.Adicionar(novo);
             MessageBox.Show("Criado com sucesso!");
         }
+
+        private void btnConfirmar_Click(object sender, RoutedEventArgs e)
+        {
+            //if (Aqui vai a comparaçao com o banco de dados para verificar se o cliente existe)
+            //{
+            //    MessageBox.Show("Cliente não esta cadastrado.");
+            //}
+
+            string nome = "Nome: " + txtNome.Text;
+            string cpf = "CPF: " + txtCpf.Text;
+            string codCliente = "Codigo do Cliente: " + txtCodCliente;
+            string protocolo = "Protocolo: " + txtProtocolo.Text;
+            string plano = "Plano: " + txtPlano.Text;
+            string tipo;
+            string cabos;
+            string discador;
+            string isolado;
+            string onu;
+            string poe;
+            string rompimento;
+            string roteador;
+            string solucao;
+            string endereco = "Endereço: " + txtEndereco;
+            string telefone = "Telefone: " + txtTelefone;
+            string referencia = "Referencia: " + txtReferencia;
+            string periodo = "Periodo da visita: " + txtPeriodo;
+            string descricao = "Descrição do problema: " + txtDescricao;
+
+            //testes
+            if (cbCabos.IsChecked == true)
+            {
+                cabos = "Cabos Verificados";
+            }
+            else
+            {
+                cabos = "";
+            }
+
+            if (cbDiscador.IsChecked == true)
+            {
+                discador = ",Criado Discador";
+            }
+            else
+            {
+                discador = "";
+            }
+
+            if (cbIsoladoCabo.IsChecked == true)
+            {
+                isolado = ",Cabo Isolado";
+            }
+            else
+            {
+                isolado = "";
+            }
+
+            if (cbONU.IsChecked == true)
+            {
+                onu = ",ONU Reiniciada";
+            }
+            else
+            {
+                onu = "";
+            }
+
+            if (cbReiniciadoPoe.IsChecked == true)
+            {
+                poe = ",POE Reiniciado";
+            }
+            else
+            {
+                poe = "";
+            }
+
+            if (cbRompimento.IsChecked == true)
+            {
+                rompimento = ",Possivel Rompimento";
+            }
+            else
+            {
+                rompimento = "";
+            }
+
+            if (cbRoteador.IsChecked == true)
+            {
+                roteador = ",Roteador Reiniciado";
+            }
+            else
+            {
+                roteador = "";
+            }
+            //tipo
+            if (rdoRegiao.IsChecked == true)
+            {
+                tipo = "Existe um problema na região do cliente, por isso a falta de conexão";
+            }
+            else if (rdoRadio.IsChecked == true)
+            {
+                tipo = "Conexão via: Radio /n Testes realizados: " + cabos + poe + isolado + discador;
+            }
+            else if (rdoFibra.IsChecked == true)
+            {
+                tipo = "Conexão via: Fibra /n Testes realizados: " + cabos + onu + rompimento + discador;
+            }
+            else
+            {
+                tipo = "Conexão via: Cabo /n Testes realizados: " + cabos + roteador + isolado + discador;
+            }
+            //solucao
+            if (rdoSolucionado.IsChecked == true)
+            {
+                solucao = "Solucionado: Sim";
+            }
+            else
+            {
+                solucao = "Solucionado: Não /nAgendamento /n" +;
+            }
+
+            txtAtendimento.SelectedText = nome + cpf;
+        }
     }
 }

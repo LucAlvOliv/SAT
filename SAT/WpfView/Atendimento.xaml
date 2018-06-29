@@ -41,7 +41,7 @@
 
                     <RadioButton x:Name="rdoNaoSolucionado" Content="Não Solucionado" HorizontalAlignment="Left" Margin="232,327,0,0" VerticalAlignment="Top" FontWeight="Bold" GroupName="Confere" Checked="rdoNaoSolucionado_Checked"/>
                     <Label x:Name="lblEnd" Content="Endereço" HorizontalAlignment="Left" Margin="89,385,0,0" VerticalAlignment="Top"/>
-                    <Label x:Name="lblRef" Content="Refenrencia" HorizontalAlignment="Left" Margin="89,498,0,0" VerticalAlignment="Top"/>
+                    <Label x:Name="lblRef" Content="Referencia" HorizontalAlignment="Left" Margin="89,498,0,0" VerticalAlignment="Top"/>
                     <Label x:Name="lblTel" Content="Telefone" HorizontalAlignment="Left" Margin="89,437,0,0" VerticalAlignment="Top"/>
                     <TextBox x:Name="txtEndereco" HorizontalAlignment="Left" Height="23" Margin="158,389,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
                     <TextBox x:Name="txtTelefone" HorizontalAlignment="Left" Height="23" Margin="158,441,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>

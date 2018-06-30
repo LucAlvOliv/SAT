@@ -2,10 +2,10 @@
 
 namespace Models
 {
-    public class Usuario
+    public class Cliente
     {
         [Key]
-        public int UsuarioID { get; set; }
+        public int ClienteID { get; set; }
 
         [Required]
         [StringLength(30)]

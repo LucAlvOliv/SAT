@@ -50,5 +50,10 @@ namespace Controllers
         {
             return context.Atendente.ToList();
         }
+
+        public bool VerificarLogin(string login, string senha)
+        {
+            return context.Atendente.Where(a => a.Usuario == login && a.Senha == senha).Count() > 0;
+        }
     }
 }

@@ -48,8 +48,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Atendente.cs" />
-    <Compile Include="AtendimentoCliente.cs" />
-    <Compile Include="Usuario.cs" />
+    <Compile Include="Atendimento.cs" />
+    <Compile Include="Cliente.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

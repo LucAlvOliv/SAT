@@ -8,12 +8,12 @@
         Title="NovoAtendente" Height="290" Width="346.834">
     <Grid Margin="0,0,2,0" Background="#FFABC1C9">
         <Button x:Name="btnCriar" Content="Criar" HorizontalAlignment="Left" Margin="120,200,0,0" VerticalAlignment="Top" Width="75" Click="btnCriar_Click"/>
-        <Label Content="Usuario" HorizontalAlignment="Left" Margin="38,50,0,0" VerticalAlignment="Top" Width="60"/>
-        <Label Content="Senha" HorizontalAlignment="Left" Margin="38,100,0,0" VerticalAlignment="Top" Width="60"/>
+        <Label Content="Usuario" HorizontalAlignment="Left" Margin="10,55,0,0" VerticalAlignment="Top" Width="60"/>
+        <Label Content="Senha" HorizontalAlignment="Left" Margin="10,100,0,0" VerticalAlignment="Top" Width="60"/>
         <TextBox x:Name="txtUsuario" HorizontalAlignment="Left" Height="23" Margin="120,50,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="178"/>
         <PasswordBox x:Name="pswSenha" HorizontalAlignment="Left" Margin="120,100,0,0" VerticalAlignment="Top" Width="178"/>
         <PasswordBox x:Name="pswConfirmarSenha" HorizontalAlignment="Left" Margin="120,150,0,0" VerticalAlignment="Top" Width="178"/>
-        <Label Content="Label" HorizontalAlignment="Left" Margin="38,150,0,0" VerticalAlignment="Top" Width="60"/>
+        <Label Content="Confirmar Senha" HorizontalAlignment="Left" Margin="10,150,0,0" VerticalAlignment="Top" Width="105"/>
 
     </Grid>
 </Window>

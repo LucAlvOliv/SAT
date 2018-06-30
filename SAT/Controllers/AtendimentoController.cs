@@ -10,21 +10,21 @@ using System.Xml.Linq;
 
 namespace Controllers
 {
-    public class AtendimentoController : IBaseController<AtendimentoCliente>
+    public class AtendimentoController : IBaseController<Atendimento>
     {
         private Contexto contexto = new Contexto();
-        public void Adicionar(AtendimentoCliente entity)
+        public void Adicionar(Atendimento entity)
         {
             contexto.AtendimentoCliente.Add(entity);
             contexto.SaveChanges();
         }
 
-        public AtendimentoCliente BuscarPorID(int id)
+        public Atendimento BuscarPorID(int id)
         {
             return contexto.AtendimentoCliente.Find(id);
         }
 
-        public void Editar(AtendimentoCliente entity)
+        public void Editar(Atendimento entity)
         {
             contexto.Entry(entity).State = System.Data.Entity.EntityState.Modified;
             contexto.SaveChanges();
@@ -32,7 +32,7 @@ namespace Controllers
 
         public void Excluir(int id)
         {
-            AtendimentoCliente usu = BuscarPorID(id);
+            Atendimento usu = BuscarPorID(id);
 
             if (usu != null)
             {
@@ -42,24 +42,24 @@ namespace Controllers
             }
         }
 
-        public IList<AtendimentoCliente> ListarPorNome(string nome)
+        public IList<Atendimento> ListarPorNome(string nome)
         {
             return contexto.AtendimentoCliente.Where(usu => usu.Nome == nome).ToList();
         }
-        public IList<AtendimentoCliente> ListarPorCpf(string cpf)
+        public IList<Atendimento> ListarPorCpf(string cpf)
         {
             return contexto.AtendimentoCliente.Where(usu => usu.CPF == cpf).ToList();
         }
-        public IList<AtendimentoCliente> ListarPorCodigo(string codigo)
+        public IList<Atendimento> ListarPorCodigo(string codigo)
         {
             return contexto.AtendimentoCliente.Where(usu => usu.CodCliente == codigo).ToList();
         }
-        public IList<AtendimentoCliente> ListarPorPlano(string plano)
+        public IList<Atendimento> ListarPorPlano(string plano)
         {
             return contexto.AtendimentoCliente.Where(usu => usu.Plano == plano).ToList();
         }
 
-        public IList<AtendimentoCliente> ListarTodos()
+        public IList<Atendimento> ListarTodos()
         {
             return contexto.AtendimentoCliente.ToList();
         }

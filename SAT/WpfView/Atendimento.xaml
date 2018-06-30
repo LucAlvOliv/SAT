@@ -50,7 +50,7 @@
                     <TextBox x:Name="txtDescricao" HorizontalAlignment="Left" Height="52" Margin="322,472,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="186"/>
                     <Label x:Name="lblDesc" Content="Descrição do Problema" HorizontalAlignment="Left" Margin="322,441,0,0" VerticalAlignment="Top"/>
                     <Label x:Name="lblPeri" Content="Periodo" HorizontalAlignment="Left" Margin="322,385,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rdoSolucionado" Content="Problema Resolvido" HorizontalAlignment="Left" Margin="89,327,0,0" VerticalAlignment="Top" GroupName="Confere" Checked="rdoSolucionado_Checked"/>
+                    <RadioButton x:Name="rdoSolucionado" Content="Problema Resolvido" HorizontalAlignment="Left" Margin="89,327,0,0" VerticalAlignment="Top" GroupName="Confere" Checked="rdoSolucionado_Checked" IsChecked="True"/>
                     <Label Content="*" HorizontalAlignment="Left" Margin="282,62,0,0" VerticalAlignment="Top" Height="23"/>
                     <Label Content="*" HorizontalAlignment="Left" Margin="282,93,0,0" VerticalAlignment="Top" Height="23"/>
                     <Label Content="*" HorizontalAlignment="Left" Margin="282,127,0,0" VerticalAlignment="Top" Height="23"/>

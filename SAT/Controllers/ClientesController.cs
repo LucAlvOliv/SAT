@@ -9,21 +9,21 @@ using System.Threading.Tasks;
 
 namespace Controllers
 {
-    public class UsuariosController : IBaseController<Usuario>
+    public class ClientesController : IBaseController<Cliente>
     {
         private Contexto contexto = new Contexto();
-        public void Adicionar(Usuario entity)
+        public void Adicionar(Cliente entity)
         {
             contexto.Usuarios.Add(entity);
             contexto.SaveChanges();
         }
 
-        public Usuario BuscarPorID(int id)
+        public Cliente BuscarPorID(int id)
         {
             return contexto.Usuarios.Find(id);
         }
 
-        public void Editar(Usuario entity)
+        public void Editar(Cliente entity)
         {
             contexto.Entry(entity).State = System.Data.Entity.EntityState.Modified;
             contexto.SaveChanges();
@@ -31,7 +31,7 @@ namespace Controllers
 
         public void Excluir(int id)
         {
-            Usuario usu = BuscarPorID(id);
+            Cliente usu = BuscarPorID(id);
 
             if (usu != null)
             {
@@ -41,12 +41,12 @@ namespace Controllers
             }
         }
 
-        public IList<Usuario> ListarPorNome(string nome)
+        public IList<Cliente> ListarPorNome(string nome)
         {
             return contexto.Usuarios.Where(usu => usu.Nome == nome).ToList();
         }
 
-        public IList<Usuario> ListarTodos()
+        public IList<Cliente> ListarTodos()
         {
             return contexto.Usuarios.ToList();
         }

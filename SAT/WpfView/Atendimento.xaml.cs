@@ -21,9 +21,18 @@ namespace WpfView
     /// </summary>
     public partial class Atendimento : Window
     {
+        Cliente clienteAtendimento;
+
+
         public Atendimento()
         {
             InitializeComponent();
+        }
+
+        private void PesquisarCliente()
+        {
+            ClientesController clientesController = new ClientesController();
+            clienteAtendimento = clientesController.BuscarPorID(int.Parse(txtCpf.Text)); // trocar por busca por cpf e passar cpf
         }
 
         private void rdoRegiao_Checked(object sender, RoutedEventArgs e)
@@ -36,6 +45,10 @@ namespace WpfView
             cbReiniciadoPoe.Visibility = Visibility.Hidden;
             cbONU.Visibility = Visibility.Hidden;
             cbRoteador.Visibility = Visibility.Hidden;
+
+            //solução
+            rdoNaoSolucionado.IsChecked = false;
+            rdoSolucionado.IsChecked = false;
 
         }
 
@@ -194,8 +207,8 @@ namespace WpfView
 
         private void btnCriarCliente_Click(object sender, RoutedEventArgs e)
         {
-            UsuariosController usuariosController = new UsuariosController();
-            Usuario novo = new Usuario();
+            ClientesController usuariosController = new ClientesController();
+            Cliente novo = new Cliente();
             novo.Nome = txtClienteNome.Text;
             novo.CPF = txtClienteCpf.Text;
             novo.Plano = txtClientePlano.Text;
@@ -211,7 +224,7 @@ namespace WpfView
 
         private void CarregarDgClientes()
         {
-            UsuariosController usuariosControllerCarregar = new UsuariosController();
+            ClientesController usuariosControllerCarregar = new ClientesController();
             dgClientes.ItemsSource = usuariosControllerCarregar.ListarTodos();
         }
 
@@ -354,9 +367,9 @@ namespace WpfView
             txtAtendimento.Text = nome + cpf + codCliente + protocolo + plano + tipo + solucao;
 
             AtendimentoController atendimentoController = new AtendimentoController();
-            AtendimentoCliente novoatendimento = new AtendimentoCliente();
-            UsuariosController usuariosController = new UsuariosController();
-            Usuario usuario = new Usuario();
+            Models.Atendimento novoatendimento = new Models.Atendimento();
+            ClientesController usuariosController = new ClientesController();
+            Cliente usuario = new Cliente();
 
             novoatendimento.Problema = txtAtendimento.Text;
             novoatendimento.Nome = txtNome.Text;
@@ -378,13 +391,13 @@ namespace WpfView
         private void btnPesquisar_Click(object sender, RoutedEventArgs e)
         {
             AtendimentoController atendimentoController = new AtendimentoController();
-            if (atendimentoController.ListarPorNome)
+            if (atendimentoController.ListarPorNome(txtPesquisar.Text) != null)
             {
                 dgAtendimentosRealizados.ItemsSource = atendimentoController.ListarPorNome(txtPesquisar.Text);
-            }else if ()
+            }else if (atendimentoController.ListarPorCpf(txtPesquisar.Text) != null)
             {
                 dgAtendimentosRealizados.ItemsSource = atendimentoController.ListarPorCpf(txtPesquisar.Text);
-            }else if ()
+            }else if (atendimentoController.ListarPorCodigo(txtPesquisar.Text) != null)
             {
                 dgAtendimentosRealizados.ItemsSource = atendimentoController.ListarPorCodigo(txtPesquisar.Text);
             }

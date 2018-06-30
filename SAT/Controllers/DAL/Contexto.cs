@@ -21,9 +21,9 @@ namespace Controllers.DAL
             // Apaga e recria a base de dados se houver alteracoes nas modelos
             //Database.SetInitializer(new DropCreateDatabaseIfModelChanges<Contexto>());
         }
-        public DbSet<Usuario> Usuarios { get; set; }
+        public DbSet<Cliente> Usuarios { get; set; }
 
-        public DbSet<AtendimentoCliente> AtendimentoCliente { get; set; }
+        public DbSet<Atendimento> AtendimentoCliente { get; set; }
 
         public DbSet<Atendente> Atendente { get; set; }
     }

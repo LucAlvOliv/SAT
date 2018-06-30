@@ -37,12 +37,14 @@ namespace WpfView
 
         private void btnEntrar_Click(object sender, RoutedEventArgs e)
         {
-            Atendente atendente = new Atendente();
-            //if (txtLogin.Text && txtSenha.Password != )
-            //{
-            //    MessageBox.Show("Nome de usuário ou senha incorretos!");
-            //    return;
-            //}
+            AtendenteController atendenteController = new AtendenteController();
+
+            string senha = Criptografia.GerarCriptografia(txtSenha.Password);
+            if (!atendenteController.VerificarLogin(txtLogin.Text,senha))
+            {
+                MessageBox.Show("Nome de usuário ou senha incorretos!");
+                return;
+            }
             Atendimento atendimento = new Atendimento();
             atendimento.Show();
         }

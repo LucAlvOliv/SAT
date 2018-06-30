@@ -367,7 +367,7 @@ namespace WpfView
             txtAtendimento.Text = nome + cpf + codCliente + protocolo + plano + tipo + solucao;
 
             AtendimentoController atendimentoController = new AtendimentoController();
-            Models.Atendimento novoatendimento = new Models.Atendimento();
+            Atendimento novoatendimento = new Atendimento();
             ClientesController usuariosController = new ClientesController();
             Cliente usuario = new Cliente();
 

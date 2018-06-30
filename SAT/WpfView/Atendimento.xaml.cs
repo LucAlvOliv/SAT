@@ -23,7 +23,6 @@ namespace WpfView
     {
         Cliente clienteAtendimento;
 
-
         public Atendimento()
         {
             InitializeComponent();
@@ -32,7 +31,8 @@ namespace WpfView
         private void PesquisarCliente()
         {
             ClientesController clientesController = new ClientesController();
-            clienteAtendimento = clientesController.BuscarPorID(int.Parse(txtCpf.Text)); // trocar por busca por cpf e passar cpf
+            //clienteAtendimento = clientesController.BuscarPorID(int.Parse(txtCpf.Text)); // trocar por busca por cpf e passar cpf
+            clienteAtendimento = clientesController.BuscarPorCpf(txtCpf.Text);
         }
 
         private void rdoRegiao_Checked(object sender, RoutedEventArgs e)
@@ -406,6 +406,19 @@ namespace WpfView
                 dgAtendimentosRealizados.ItemsSource = atendimentoController.ListarPorPlano(txtPesquisar.Text);
             }
             
+        }
+
+        private void btnCompletar_Click(object sender, RoutedEventArgs e)
+        {
+            AtendimentoController atendimentoController = new AtendimentoController();
+            if (atendimentoController.ListarPorCpf(txtPesquisar.Text) == null)
+            {
+                //se nao encontar um cadastro com esse cpf, message box de que nao existe
+            }
+            else
+            {
+                //se encontrar, auto completar tudo
+            }
         }
     }
 }

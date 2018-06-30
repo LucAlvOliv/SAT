@@ -46,7 +46,7 @@ namespace Controllers
         {
             return contexto.AtendimentoCliente.Where(usu => usu.Nome == nome).ToList();
         }
-        public IList<Atendimento> ListarPorCpf(string cpf)
+        public IList<Atendimento> ListarPorCp(string cpf)
         {
             return contexto.AtendimentoCliente.Where(usu => usu.CPF == cpf).ToList();
         }
@@ -62,6 +62,11 @@ namespace Controllers
         public IList<Atendimento> ListarTodos()
         {
             return contexto.AtendimentoCliente.ToList();
+        }
+
+        public IList<Atendimento> Completar(string clienteid)
+        {
+            return contexto.AtendimentoCliente.Where(usu => usu.CPF == clienteid).ToList();
         }
     }
 }

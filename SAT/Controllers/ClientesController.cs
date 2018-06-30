@@ -14,13 +14,13 @@ namespace Controllers
         private Contexto contexto = new Contexto();
         public void Adicionar(Cliente entity)
         {
-            contexto.Usuarios.Add(entity);
+            contexto.Cliente.Add(entity);
             contexto.SaveChanges();
         }
 
         public Cliente BuscarPorID(int id)
         {
-            return contexto.Usuarios.Find(id);
+            return contexto.Cliente.Find(id);
         }
 
         public void Editar(Cliente entity)
@@ -35,7 +35,7 @@ namespace Controllers
 
             if (usu != null)
             {
-                contexto.Usuarios.Remove(usu);
+                contexto.Cliente.Remove(usu);
 
                 contexto.SaveChanges();
             }
@@ -43,12 +43,17 @@ namespace Controllers
 
         public IList<Cliente> ListarPorNome(string nome)
         {
-            return contexto.Usuarios.Where(usu => usu.Nome == nome).ToList();
+            return contexto.Cliente.Where(usu => usu.Nome == nome).ToList();
         }
 
         public IList<Cliente> ListarTodos()
         {
-            return contexto.Usuarios.ToList();
+            return contexto.Cliente.ToList();
+        }
+
+        public IList<Cliente> BuscarPorCpf(string cpf)
+        {
+            return contexto.Cliente.Where(usu => usu.CPF == cpf).ToList();
         }
     }
 }

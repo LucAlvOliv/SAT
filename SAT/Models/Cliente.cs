@@ -12,7 +12,6 @@ namespace Models
         public string Nome { get; set; }
 
         [Required]
-        [StringLength(11)]
         public string CPF { get; set; }
 
         [Required]

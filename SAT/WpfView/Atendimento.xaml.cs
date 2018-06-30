@@ -32,6 +32,9 @@ namespace WpfView
         {
             ClientesController clientesController = new ClientesController();
             //clienteAtendimento = clientesController.BuscarPorID(int.Parse(txtCpf.Text)); // trocar por busca por cpf e passar cpf
+
+            // LINHA DE BAIXO COM PROBLEMA \/
+
             clienteAtendimento = clientesController.BuscarPorCpf(txtCpf.Text);
         }
 
@@ -410,8 +413,8 @@ namespace WpfView
 
         private void btnCompletar_Click(object sender, RoutedEventArgs e)
         {
-            AtendimentoController atendimentoController = new AtendimentoController();
-            if (atendimentoController.ListarPorCpf(txtPesquisar.Text) == null)
+            //AtendimentoController atendimentoController = new AtendimentoController();
+            //if (atendimentoController.ListarPorCpf(txtPesquisar.Text) == null)
             {
                 //se nao encontar um cadastro com esse cpf, message box de que nao existe
             }

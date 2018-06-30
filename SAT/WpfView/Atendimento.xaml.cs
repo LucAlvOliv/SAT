@@ -366,8 +366,6 @@ namespace WpfView
 
             if (usuario.CPF != novoatendimento.CPF || usuario.CodCliente != novoatendimento.CodCliente || usuario.Nome != novoatendimento.Nome || usuario.Plano != novoatendimento.Plano)
             {
-                MessageBox.Show(usuario.CPF);
-                MessageBox.Show(novoatendimento.CPF);
                 MessageBox.Show("Informações concedidas não conferem com os dados cadastrados do Cliente.\nVerifique os campos obrigatórios novamente");
             }
             else
@@ -380,7 +378,21 @@ namespace WpfView
         private void btnPesquisar_Click(object sender, RoutedEventArgs e)
         {
             AtendimentoController atendimentoController = new AtendimentoController();
-            atendimentoController.ListarPorNome(txtPesquisar.Text);
+            if (atendimentoController.ListarPorNome)
+            {
+                dgAtendimentosRealizados.ItemsSource = atendimentoController.ListarPorNome(txtPesquisar.Text);
+            }else if ()
+            {
+                dgAtendimentosRealizados.ItemsSource = atendimentoController.ListarPorCpf(txtPesquisar.Text);
+            }else if ()
+            {
+                dgAtendimentosRealizados.ItemsSource = atendimentoController.ListarPorCodigo(txtPesquisar.Text);
+            }
+            else
+            {
+                dgAtendimentosRealizados.ItemsSource = atendimentoController.ListarPorPlano(txtPesquisar.Text);
+            }
+            
         }
     }
 }

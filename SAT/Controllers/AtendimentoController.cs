@@ -46,6 +46,18 @@ namespace Controllers
         {
             return contexto.AtendimentoCliente.Where(usu => usu.Nome == nome).ToList();
         }
+        public IList<AtendimentoCliente> ListarPorCpf(string cpf)
+        {
+            return contexto.AtendimentoCliente.Where(usu => usu.CPF == cpf).ToList();
+        }
+        public IList<AtendimentoCliente> ListarPorCodigo(string codigo)
+        {
+            return contexto.AtendimentoCliente.Where(usu => usu.CodCliente == codigo).ToList();
+        }
+        public IList<AtendimentoCliente> ListarPorPlano(string plano)
+        {
+            return contexto.AtendimentoCliente.Where(usu => usu.Plano == plano).ToList();
+        }
 
         public IList<AtendimentoCliente> ListarTodos()
         {

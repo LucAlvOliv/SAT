@@ -15,8 +15,10 @@ namespace Models
         [StringLength(11)]
         public string CPF { get; set; }
 
+        [Required]
         public string Plano { get; set; }
 
+        [Required]
         public string CodCliente { get; set; }
 
 

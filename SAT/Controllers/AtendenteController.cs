@@ -48,7 +48,7 @@ namespace Controllers
 
         public IList<Atendente> ListarTodos()
         {
-            throw new NotImplementedException();
+            return context.Atendente.ToList();
         }
     }
 }

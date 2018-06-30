@@ -203,19 +203,41 @@ namespace WpfView
             usuariosController.Adicionar(novo);
             MessageBox.Show("Criado com sucesso!");
         }
+                
+        private void Grid_Loaded(object sender, RoutedEventArgs e)
+        {
+            CarregarDgClientes();
+        }
 
-        private void btnConfirmar_Click(object sender, RoutedEventArgs e)
+        private void CarregarDgClientes()
+        {
+            UsuariosController usuariosControllerCarregar = new UsuariosController();
+            dgClientes.ItemsSource = usuariosControllerCarregar.ListarTodos();
+        }
+
+        private void GridHistorico_Loaded(object sender, RoutedEventArgs e)
+        {
+            CarregarDgAtendimentosRealizados();
+        }
+
+        private void CarregarDgAtendimentosRealizados()
+        {
+            AtendimentoController atendimentoControllerCarregar = new AtendimentoController();
+            dgAtendimentosRealizados.ItemsSource = atendimentoControllerCarregar.ListarTodos();
+        }
+
+        private void btnConfirmar_Click_1(object sender, RoutedEventArgs e)
         {
             //if (Aqui vai a comparaçao com o banco de dados para verificar se o cliente existe)
             //{
             //    MessageBox.Show("Cliente não esta cadastrado.");
             //}
 
-            string nome = "Nome: " + txtNome.Text;
-            string cpf = "CPF: " + txtCpf.Text;
-            string codCliente = "Codigo do Cliente: " + txtCodCliente;
-            string protocolo = "Protocolo: " + txtProtocolo.Text;
-            string plano = "Plano: " + txtPlano.Text;
+            string nome = "Nome: " + txtNome.Text + "\n";
+            string cpf = "CPF: " + txtCpf.Text + "\n";
+            string codCliente = "Codigo do Cliente: " + txtCodCliente.Text + "\n";
+            string protocolo = "Protocolo: " + txtProtocolo.Text + "\n";
+            string plano = "Plano: " + txtPlano.Text + "\n";
             string tipo;
             string cabos;
             string discador;
@@ -225,16 +247,16 @@ namespace WpfView
             string rompimento;
             string roteador;
             string solucao;
-            string endereco = "Endereço: " + txtEndereco;
-            string telefone = "Telefone: " + txtTelefone;
-            string referencia = "Referencia: " + txtReferencia;
-            string periodo = "Periodo da visita: " + txtPeriodo;
-            string descricao = "Descrição do problema: " + txtDescricao;
+            string endereco = "Endereço: " + txtEndereco.Text + "\n";
+            string telefone = "Telefone: " + txtTelefone.Text + "\n";
+            string referencia = "Referencia: " + txtReferencia.Text + "\n";
+            string periodo = "Periodo da visita: " + txtPeriodo.Text + "\n";
+            string descricao = "Descrição do problema: " + txtDescricao.Text + "\n";
 
             //testes
             if (cbCabos.IsChecked == true)
             {
-                cabos = "Cabos Verificados";
+                cabos = " -Cabos Verificados" + "\n";
             }
             else
             {
@@ -243,7 +265,7 @@ namespace WpfView
 
             if (cbDiscador.IsChecked == true)
             {
-                discador = ",Criado Discador";
+                discador = " -Criado Discador" + "\n";
             }
             else
             {
@@ -252,7 +274,7 @@ namespace WpfView
 
             if (cbIsoladoCabo.IsChecked == true)
             {
-                isolado = ",Cabo Isolado";
+                isolado = " -Cabo Isolado" + "\n";
             }
             else
             {
@@ -261,7 +283,7 @@ namespace WpfView
 
             if (cbONU.IsChecked == true)
             {
-                onu = ",ONU Reiniciada";
+                onu = " -ONU Reiniciada" + "\n";
             }
             else
             {
@@ -270,7 +292,7 @@ namespace WpfView
 
             if (cbReiniciadoPoe.IsChecked == true)
             {
-                poe = ",POE Reiniciado";
+                poe = " -POE Reiniciado" + "\n";
             }
             else
             {
@@ -279,7 +301,7 @@ namespace WpfView
 
             if (cbRompimento.IsChecked == true)
             {
-                rompimento = ",Possivel Rompimento";
+                rompimento = " -Possivel Rompimento" + "\n";
             }
             else
             {
@@ -288,7 +310,7 @@ namespace WpfView
 
             if (cbRoteador.IsChecked == true)
             {
-                roteador = ",Roteador Reiniciado";
+                roteador = " -Roteador Reiniciado" + "\n";
             }
             else
             {
@@ -301,32 +323,64 @@ namespace WpfView
             }
             else if (rdoRadio.IsChecked == true)
             {
-                tipo = "Conexão via: Radio /n Testes realizados: " + cabos + poe + isolado + discador;
+                tipo = "Conexão via: Radio \nTestes realizados: \n" + cabos + poe + isolado + discador;
             }
             else if (rdoFibra.IsChecked == true)
             {
-                tipo = "Conexão via: Fibra /n Testes realizados: " + cabos + onu + rompimento + discador;
+                tipo = "Conexão via: Fibra \nTestes realizados: \n" + cabos + onu + rompimento + discador;
+            }
+            else if (rdoCabeada.IsChecked == true)
+            {
+                tipo = "Conexão via: Cabo \nTestes realizados: \n" + cabos + roteador + isolado + discador;
             }
             else
             {
-                tipo = "Conexão via: Cabo /n Testes realizados: " + cabos + roteador + isolado + discador;
+                tipo = "";
             }
             //solucao
             if (rdoSolucionado.IsChecked == true)
             {
                 solucao = "Solucionado: Sim";
             }
+            else if (rdoNaoSolucionado.IsChecked == true)
+            {
+                solucao = "Solucionado: Não \n\nAgendamento \n" + endereco + telefone + referencia + periodo + descricao;
+            }
             else
             {
-                solucao = "Solucionado: Não /nAgendamento /n" + endereco + telefone + referencia + periodo + descricao;
+                solucao = "";
             }
 
-            txtAtendimento.SelectedText = nome + cpf + codCliente + protocolo + plano + tipo + solucao;
+            txtAtendimento.Text = nome + cpf + codCliente + protocolo + plano + tipo + solucao;
+
             AtendimentoController atendimentoController = new AtendimentoController();
-            Models.AtendimentoCliente novoatendimento = new Models.AtendimentoCliente();
+            AtendimentoCliente novoatendimento = new AtendimentoCliente();
+            UsuariosController usuariosController = new UsuariosController();
+            Usuario usuario = new Usuario();
+
             novoatendimento.Problema = txtAtendimento.Text;
-            atendimentoController.Adicionar(novoatendimento);
-            MessageBox.Show("Atendimento salvo");
+            novoatendimento.Nome = txtNome.Text;
+            novoatendimento.Plano = txtPlano.Text;
+            novoatendimento.CPF = txtCpf.Text;
+            novoatendimento.CodCliente = txtCodCliente.Text;
+
+            if (usuario.CPF != novoatendimento.CPF || usuario.CodCliente != novoatendimento.CodCliente || usuario.Nome != novoatendimento.Nome || usuario.Plano != novoatendimento.Plano)
+            {
+                MessageBox.Show(usuario.CPF);
+                MessageBox.Show(novoatendimento.CPF);
+                MessageBox.Show("Informações concedidas não conferem com os dados cadastrados do Cliente.\nVerifique os campos obrigatórios novamente");
+            }
+            else
+            {
+                atendimentoController.Adicionar(novoatendimento);
+                MessageBox.Show("Atendimento salvo");
+            }
+        }
+
+        private void btnPesquisar_Click(object sender, RoutedEventArgs e)
+        {
+            AtendimentoController atendimentoController = new AtendimentoController();
+            atendimentoController.ListarPorNome(txtPesquisar.Text);
         }
     }
 }

@@ -12,7 +12,6 @@ namespace Models
         public string Usuario { get; set; }
 
         [Required]
-        //[StringLength(10)]
         public string Senha { get; set; }
     }
 }

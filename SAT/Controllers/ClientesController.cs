@@ -51,9 +51,9 @@ namespace Controllers
             return contexto.Cliente.ToList();
         }
 
-        public IList<Cliente> BuscarPorCpf(string cpf)
+        public Cliente BuscarPorCpf(string cpf)
         {
-            return contexto.Cliente.Where(usu => usu.CPF == cpf).ToList();
+            return contexto.Cliente.Where(usu => usu.CPF == cpf).ToList().FirstOrDefault();
         }
     }
 }

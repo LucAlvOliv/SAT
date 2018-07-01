@@ -31,10 +31,6 @@ namespace WpfView
         private void PesquisarCliente()
         {
             ClientesController clientesController = new ClientesController();
-            //clienteAtendimento = clientesController.BuscarPorID(int.Parse(txtCpf.Text)); // trocar por busca por cpf e passar cpf
-
-            // LINHA DE BAIXO COM PROBLEMA \/
-
             clienteAtendimento = clientesController.BuscarPorCpf(txtCpf.Text);
         }
 
@@ -370,17 +366,20 @@ namespace WpfView
             txtAtendimento.Text = nome + cpf + codCliente + protocolo + plano + tipo + solucao;
 
             AtendimentoController atendimentoController = new AtendimentoController();
-            Atendimento novoatendimento = new Atendimento();
-            ClientesController usuariosController = new ClientesController();
-            Cliente usuario = new Cliente();
-
+            Models.Atendimento novoatendimento = new Models.Atendimento();
             novoatendimento.Problema = txtAtendimento.Text;
+            novoatendimento.ClienteID = clienteAtendimento.ClienteID;
+            atendimentoController.Adicionar(novoatendimento);
+            MessageBox.Show("Atendimento salvo");
+
+            //ERRADO
+            /*novoatendimento.Problema = txtAtendimento.Text;
             novoatendimento.Nome = txtNome.Text;
             novoatendimento.Plano = txtPlano.Text;
             novoatendimento.CPF = txtCpf.Text;
-            novoatendimento.CodCliente = txtCodCliente.Text;
+            novoatendimento.CodCliente = txtCodCliente.Text;*/
 
-            if (usuario.CPF != novoatendimento.CPF || usuario.CodCliente != novoatendimento.CodCliente || usuario.Nome != novoatendimento.Nome || usuario.Plano != novoatendimento.Plano)
+            /*if (usuario.CPF != novoatendimento.CPF || usuario.CodCliente != novoatendimento.CodCliente || usuario.Nome != novoatendimento.Nome || usuario.Plano != novoatendimento.Plano)
             {
                 MessageBox.Show("Informações concedidas não conferem com os dados cadastrados do Cliente.\nVerifique os campos obrigatórios novamente");
             }
@@ -388,12 +387,13 @@ namespace WpfView
             {
                 atendimentoController.Adicionar(novoatendimento);
                 MessageBox.Show("Atendimento salvo");
-            }
+            }*/
         }
 
         private void btnPesquisar_Click(object sender, RoutedEventArgs e)
         {
-            AtendimentoController atendimentoController = new AtendimentoController();
+            // AQUI O BOTAO TEM QUE PESQUISAR PELO CLIENTEID QUE ESTA NO ATENDIMENTO MODELS
+            /*AtendimentoController atendimentoController = new AtendimentoController();
             if (atendimentoController.ListarPorNome(txtPesquisar.Text) != null)
             {
                 dgAtendimentosRealizados.ItemsSource = atendimentoController.ListarPorNome(txtPesquisar.Text);
@@ -407,20 +407,25 @@ namespace WpfView
             else
             {
                 dgAtendimentosRealizados.ItemsSource = atendimentoController.ListarPorPlano(txtPesquisar.Text);
-            }
+            }*/
             
         }
 
         private void btnCompletar_Click(object sender, RoutedEventArgs e)
         {
-            //AtendimentoController atendimentoController = new AtendimentoController();
-            //if (atendimentoController.ListarPorCpf(txtPesquisar.Text) == null)
+            PesquisarCliente();
+            if (clienteAtendimento.CPF == null)
             {
                 //se nao encontar um cadastro com esse cpf, message box de que nao existe
+                MessageBox.Show("Esse cliente nao existe ou não esta cadastrado");
             }
             else
             {
-                //se encontrar, auto completar tudo
+                //se encontrar, auto completar
+                txtCpf.Text = clienteAtendimento.CPF;
+                txtNome.Text = clienteAtendimento.Nome;
+                txtPlano.Text = clienteAtendimento.Plano;
+                txtCodCliente.Text = clienteAtendimento.CodCliente;
             }
         }
     }

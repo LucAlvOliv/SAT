@@ -367,12 +367,7 @@ namespace WpfView
 
         private void btnPesquisar_Click(object sender, RoutedEventArgs e)
         {
-            AtendimentoController atendimentoController = new AtendimentoController();
-            Atendimento atendimento = new Atendimento();
-            if ()
-            {
-                dgAtendimentosRealizados.ItemsSource = atendimentoController.ListarPorClienteID();
-            }
+            
         }
 
         private void btnCompletar_Click(object sender, RoutedEventArgs e)
@@ -391,6 +386,11 @@ namespace WpfView
                 txtPlano.Text = clienteAtendimento.Plano;
                 txtCodCliente.Text = clienteAtendimento.CodCliente;
             }
+        }
+
+        private void Atendimento1_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }

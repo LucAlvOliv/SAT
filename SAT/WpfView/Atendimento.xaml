@@ -5,12 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfView"
         mc:Ignorable="d"
-        Title="Atendimento" Height="653" Width="1010">
+        Title="Atendimento" Height="653" Width="865">
 
     <Grid>
-        <TabControl x:Name="Atendimento1" HorizontalAlignment="Left" Height="769" VerticalAlignment="Top" Width="1000" Margin="0,0,-8,0">
-            <TabItem Header="Atendimento">
-                <Grid Background="#FFF5CA9F">
+        <TabControl x:Name="Atendimento1" HorizontalAlignment="Left" Height="622" VerticalAlignment="Top" Width="1027" RenderTransformOrigin="0.5,0.5" Margin="0,0,-170,0" SelectionChanged="Atendimento1_SelectionChanged">
+            <TabControl.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="-0.208"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="-1.496"/>
+                </TransformGroup>
+            </TabControl.RenderTransform>
+            <TabItem Header="Atendimento" >
+                <Grid Background="#FFF5CA9F" Margin="0,0,169,0">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
@@ -36,7 +44,7 @@
                     <CheckBox x:Name="cbRoteador" Content="Roteador Reini." HorizontalAlignment="Left" Margin="218,265,0,0" VerticalAlignment="Top" Height="15" Width="108" Visibility="Hidden"/>
                     <CheckBox x:Name="cbONU" Content="ONU Reini." HorizontalAlignment="Left" Margin="218,265,0,0" VerticalAlignment="Top" Visibility="Hidden"/>
                     <CheckBox x:Name="cbRompimento" Content="Possivel Romp." HorizontalAlignment="Left" Margin="340,265,0,0" VerticalAlignment="Top" Visibility="Hidden"/>
-                    <TextBox x:Name="txtAtendimento" HorizontalAlignment="Left" Height="515" Margin="546,62,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="252"/>
+                    <TextBox x:Name="txtAtendimento" HorizontalAlignment="Left" Height="515" Margin="546,62,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="262"/>
                     <Button x:Name="btnConfirmar" Content="Confirmar" HorizontalAlignment="Left" Margin="89,557,0,0" VerticalAlignment="Top" Width="75" Background="#FF92DA69" Click="btnConfirmar_Click_1"/>
 
                     <RadioButton x:Name="rdoNaoSolucionado" Content="Não Solucionado" HorizontalAlignment="Left" Margin="232,327,0,0" VerticalAlignment="Top" FontWeight="Bold" GroupName="Confere" Checked="rdoNaoSolucionado_Checked"/>
@@ -61,32 +69,29 @@
                 </Grid>
             </TabItem>
             <TabItem Header="Histórico">
-                <Grid x:Name="GridHistorico" Background="#FFF5CA9F" Loaded="GridHistorico_Loaded">
-                    <Button x:Name="btnPesquisar" Content="Pesquisar" HorizontalAlignment="Left" Margin="259,65,0,0" VerticalAlignment="Top" Width="76" Height="23" Click="btnPesquisar_Click"/>
-                    <TextBox x:Name="txtPesquisar" HorizontalAlignment="Left" Height="23" Margin="62,65,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="192"/>
-                    <DataGrid x:Name="dgAtendimentosRealizados" HorizontalAlignment="Left" Height="451" Margin="62,102,0,0" VerticalAlignment="Top" Width="871"/>
-                    <RadioButton x:Name="rdoNome" Content="Nome" HorizontalAlignment="Left" Margin="62,39,0,0" VerticalAlignment="Top" GroupName="grupodepesquisa" IsChecked="True"/>
-                    <RadioButton x:Name="rdoCPF" Content="CPF" HorizontalAlignment="Left" Margin="190,39,0,0" VerticalAlignment="Top" GroupName="grupodepesquisa"/>
-                    <RadioButton x:Name="rdoPlano" Content="Plano" HorizontalAlignment="Left" Margin="318,39,0,0" VerticalAlignment="Top" GroupName="grupodepesquisa"/>
-                    <RadioButton x:Name="rdoCodCliente" Content="Cod.Cliente" HorizontalAlignment="Left" Margin="449,39,0,0" VerticalAlignment="Top" GroupName="grupodepesquisa"/>
-                    <Label Content="Pesquisar por:" HorizontalAlignment="Left" Margin="62,13,0,0" VerticalAlignment="Top"/>
-                </Grid>
-            </TabItem>
-            <TabItem Header="Cliente">
-                <Grid x:Name="GridClientes" Background="#FFF5CA9F" Loaded="Grid_Loaded">
+                <Grid x:Name="GridHistorico" Background="#FFF5CA9F" Loaded="GridHistorico_Loaded" Margin="0,0,172,0">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
-                    <Label x:Name="lblClienteCpf" Content="CPF" HorizontalAlignment="Left" Margin="130,182,0,0" VerticalAlignment="Top"/>
-                    <Label x:Name="lblClienteNome" Content="Nome" HorizontalAlignment="Left" Margin="130,101,0,0" VerticalAlignment="Top"/>
-                    <Label x:Name="lblClientePlano" Content="Plano" HorizontalAlignment="Left" Margin="130,280,0,0" VerticalAlignment="Top"/>
-                    <Label x:Name="lblClienteCod" Content="Cod.Cliente" HorizontalAlignment="Left" Margin="130,365,0,0" VerticalAlignment="Top"/>
-                    <TextBox x:Name="txtClienteCod" HorizontalAlignment="Left" Height="23" Margin="246,369,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-                    <TextBox x:Name="txtClientePlano" HorizontalAlignment="Left" Height="23" Margin="246,284,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-                    <TextBox x:Name="txtClienteCpf" HorizontalAlignment="Left" Height="23" Margin="246,186,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-                    <TextBox x:Name="txtClienteNome" HorizontalAlignment="Left" Height="23" Margin="246,105,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-                    <Button x:Name="btnCriarCliente" Content="Cadastrar" HorizontalAlignment="Left" Margin="196,444,0,0" VerticalAlignment="Top" Width="74" Click="btnCriarCliente_Click"/>
-                    <DataGrid x:Name="dgClientes" HorizontalAlignment="Left" Height="359" Margin="566,105,0,0" VerticalAlignment="Top" Width="331"/>
+                    <DataGrid x:Name="dgAtendimentosRealizados" HorizontalAlignment="Left" Height="451" Margin="62,102,0,0" VerticalAlignment="Top" Width="730"/>
+                    <Label Content="Histórico de atendimentos realizados: " HorizontalAlignment="Left" Margin="62,56,0,0" VerticalAlignment="Top"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Clientes">
+                <Grid x:Name="GridClientes" Background="#FFF5CA9F" Loaded="Grid_Loaded" Margin="0,0,161,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Label x:Name="lblClienteCpf" Content="CPF" HorizontalAlignment="Left" Margin="55,124,0,0" VerticalAlignment="Top"/>
+                    <Label x:Name="lblClienteNome" Content="Nome" HorizontalAlignment="Left" Margin="42,56,0,0" VerticalAlignment="Top"/>
+                    <Label x:Name="lblClientePlano" Content="Plano" HorizontalAlignment="Left" Margin="45,188,0,0" VerticalAlignment="Top"/>
+                    <Label x:Name="lblClienteCod" Content="Cod.Cliente" HorizontalAlignment="Left" Margin="14,267,0,0" VerticalAlignment="Top"/>
+                    <TextBox x:Name="txtClienteCod" HorizontalAlignment="Left" Height="23" Margin="130,270,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <TextBox x:Name="txtClientePlano" HorizontalAlignment="Left" Height="23" Margin="130,191,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <TextBox x:Name="txtClienteCpf" HorizontalAlignment="Left" Height="23" Margin="130,127,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <TextBox x:Name="txtClienteNome" HorizontalAlignment="Left" Height="23" Margin="130,59,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <Button x:Name="btnCriarCliente" Content="Cadastrar" HorizontalAlignment="Left" Margin="79,369,0,0" VerticalAlignment="Top" Width="74" Click="btnCriarCliente_Click"/>
+                    <DataGrid x:Name="dgClientes" HorizontalAlignment="Left" Height="459" Margin="302,59,0,0" VerticalAlignment="Top" Width="432"/>
                 </Grid>
             </TabItem>
         </TabControl>

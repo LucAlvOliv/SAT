@@ -42,24 +42,10 @@ namespace Controllers
             }
         }
 
-        //ERRADO
         public IList<Atendimento> ListarPorNome(string nome)
         {
-            //return contexto.AtendimentoCliente.Where(usu => usu.Nome == nome).ToList();
             return contexto.AtendimentoCliente.Where(usu => usu.Problema == nome).ToList();
         }
-        /*public IList<Atendimento> ListarPorCp(string cpf)
-        {
-            return contexto.AtendimentoCliente.Where(usu => usu.CPF == cpf).ToList();
-        }
-        public IList<Atendimento> ListarPorCodigo(string codigo)
-        {
-            return contexto.AtendimentoCliente.Where(usu => usu.CodCliente == codigo).ToList();
-        }
-        public IList<Atendimento> ListarPorPlano(string plano)
-        {
-            return contexto.AtendimentoCliente.Where(usu => usu.Plano == plano).ToList();
-        }*/
 
         public IList<Atendimento> ListarTodos()
         {

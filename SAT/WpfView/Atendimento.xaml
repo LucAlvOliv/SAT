@@ -62,9 +62,14 @@
             </TabItem>
             <TabItem Header="Histórico">
                 <Grid x:Name="GridHistorico" Background="#FFF5CA9F" Loaded="GridHistorico_Loaded">
-                    <Button x:Name="btnPesquisar" Content="Pesquisar" HorizontalAlignment="Left" Margin="204,50,0,0" VerticalAlignment="Top" Width="76" Height="23" Click="btnPesquisar_Click"/>
-                    <TextBox x:Name="txtPesquisar" HorizontalAlignment="Left" Height="23" Margin="62,50,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <Button x:Name="btnPesquisar" Content="Pesquisar" HorizontalAlignment="Left" Margin="259,65,0,0" VerticalAlignment="Top" Width="76" Height="23" Click="btnPesquisar_Click"/>
+                    <TextBox x:Name="txtPesquisar" HorizontalAlignment="Left" Height="23" Margin="62,65,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="192"/>
                     <DataGrid x:Name="dgAtendimentosRealizados" HorizontalAlignment="Left" Height="451" Margin="62,102,0,0" VerticalAlignment="Top" Width="871"/>
+                    <RadioButton x:Name="rdoNome" Content="Nome" HorizontalAlignment="Left" Margin="62,39,0,0" VerticalAlignment="Top" GroupName="grupodepesquisa" IsChecked="True"/>
+                    <RadioButton x:Name="rdoCPF" Content="CPF" HorizontalAlignment="Left" Margin="190,39,0,0" VerticalAlignment="Top" GroupName="grupodepesquisa"/>
+                    <RadioButton x:Name="rdoPlano" Content="Plano" HorizontalAlignment="Left" Margin="318,39,0,0" VerticalAlignment="Top" GroupName="grupodepesquisa"/>
+                    <RadioButton x:Name="rdoCodCliente" Content="Cod.Cliente" HorizontalAlignment="Left" Margin="449,39,0,0" VerticalAlignment="Top" GroupName="grupodepesquisa"/>
+                    <Label Content="Pesquisar por:" HorizontalAlignment="Left" Margin="62,13,0,0" VerticalAlignment="Top"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Cliente">

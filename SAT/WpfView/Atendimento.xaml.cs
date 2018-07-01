@@ -16,9 +16,6 @@ using System.Windows.Shapes;
 
 namespace WpfView
 {
-    /// <summary>
-    /// Lógica interna para Atendimento.xaml
-    /// </summary>
     public partial class Atendimento : Window
     {
         Cliente clienteAtendimento;
@@ -240,11 +237,6 @@ namespace WpfView
 
         private void btnConfirmar_Click_1(object sender, RoutedEventArgs e)
         {
-            //if (Aqui vai a comparaçao com o banco de dados para verificar se o cliente existe)
-            //{
-            //    MessageBox.Show("Cliente não esta cadastrado.");
-            //}
-
             string nome = "Nome: " + txtNome.Text + "\n";
             string cpf = "CPF: " + txtCpf.Text + "\n";
             string codCliente = "Codigo do Cliente: " + txtCodCliente.Text + "\n";
@@ -371,44 +363,16 @@ namespace WpfView
             novoatendimento.ClienteID = clienteAtendimento.ClienteID;
             atendimentoController.Adicionar(novoatendimento);
             MessageBox.Show("Atendimento salvo");
-
-            //ERRADO
-            /*novoatendimento.Problema = txtAtendimento.Text;
-            novoatendimento.Nome = txtNome.Text;
-            novoatendimento.Plano = txtPlano.Text;
-            novoatendimento.CPF = txtCpf.Text;
-            novoatendimento.CodCliente = txtCodCliente.Text;*/
-
-            /*if (usuario.CPF != novoatendimento.CPF || usuario.CodCliente != novoatendimento.CodCliente || usuario.Nome != novoatendimento.Nome || usuario.Plano != novoatendimento.Plano)
-            {
-                MessageBox.Show("Informações concedidas não conferem com os dados cadastrados do Cliente.\nVerifique os campos obrigatórios novamente");
-            }
-            else
-            {
-                atendimentoController.Adicionar(novoatendimento);
-                MessageBox.Show("Atendimento salvo");
-            }*/
         }
 
         private void btnPesquisar_Click(object sender, RoutedEventArgs e)
         {
-            // AQUI O BOTAO TEM QUE PESQUISAR PELO CLIENTEID QUE ESTA NO ATENDIMENTO MODELS
-            /*AtendimentoController atendimentoController = new AtendimentoController();
-            if (atendimentoController.ListarPorNome(txtPesquisar.Text) != null)
+            AtendimentoController atendimentoController = new AtendimentoController();
+            Atendimento atendimento = new Atendimento();
+            if ()
             {
-                dgAtendimentosRealizados.ItemsSource = atendimentoController.ListarPorNome(txtPesquisar.Text);
-            }else if (atendimentoController.ListarPorCpf(txtPesquisar.Text) != null)
-            {
-                dgAtendimentosRealizados.ItemsSource = atendimentoController.ListarPorCpf(txtPesquisar.Text);
-            }else if (atendimentoController.ListarPorCodigo(txtPesquisar.Text) != null)
-            {
-                dgAtendimentosRealizados.ItemsSource = atendimentoController.ListarPorCodigo(txtPesquisar.Text);
+                dgAtendimentosRealizados.ItemsSource = atendimentoController.ListarPorClienteID();
             }
-            else
-            {
-                dgAtendimentosRealizados.ItemsSource = atendimentoController.ListarPorPlano(txtPesquisar.Text);
-            }*/
-            
         }
 
         private void btnCompletar_Click(object sender, RoutedEventArgs e)
@@ -417,7 +381,7 @@ namespace WpfView
             if (clienteAtendimento.CPF == null)
             {
                 //se nao encontar um cadastro com esse cpf, message box de que nao existe
-                MessageBox.Show("Esse cliente nao existe ou não esta cadastrado");
+                MessageBox.Show("CPF incorreto ou cliente não cadastrado");
             }
             else
             {

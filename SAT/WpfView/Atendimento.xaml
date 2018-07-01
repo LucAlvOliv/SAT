@@ -55,7 +55,7 @@
                     <Label Content="*" HorizontalAlignment="Left" Margin="282,93,0,0" VerticalAlignment="Top" Height="23"/>
                     <Label Content="*" HorizontalAlignment="Left" Margin="282,127,0,0" VerticalAlignment="Top" Height="23"/>
                     <Label Content="*" HorizontalAlignment="Left" Margin="508,93,0,0" VerticalAlignment="Top" Height="23" RenderTransformOrigin="1.733,0.348"/>
-                    <Button x:Name="btnCompletar" Content="Pesquisar" HorizontalAlignment="Left" Margin="162,37,0,0" VerticalAlignment="Top" Width="75" Background="#FF8C9BDC" Click="btnCompletar_Click"/>
+                    <Button x:Name="btnCompletar" Content="Localizar" HorizontalAlignment="Left" Margin="162,37,0,0" VerticalAlignment="Top" Width="75" Background="#FF8C9BDC" Click="btnCompletar_Click"/>
 
 
                 </Grid>
